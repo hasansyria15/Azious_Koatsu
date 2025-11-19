@@ -115,7 +115,7 @@ USE_TZ = True
 ALLOWED_HOSTS = [
     'localhost',
     "127.0.0.1",
-    "webapp-2839784.pythonanywhere.com"
+    "www.koatsu-global.com"
 ]
 
 
