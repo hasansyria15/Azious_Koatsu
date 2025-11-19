@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Site'
 ]
 
 MIDDLEWARE = [
@@ -109,6 +110,13 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+#
+ALLOWED_HOSTS = [
+    'localhost',
+    "127.0.0.1",
+    "webapp-2839784.pythonanywhere.com"
+]
 
 
 # Static files (CSS, JavaScript, Images)
