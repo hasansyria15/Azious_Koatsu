@@ -601,7 +601,6 @@ body {
         margin: 0 0 0.5rem 0;
         letter-spacing: 2px;
         opacity: 0;
-        animation: fadeInLeft 0.8s ease-out 0.3s forwards;
     }
 
     .hero-title {
@@ -614,7 +613,6 @@ body {
         line-height: 1.1;
         text-transform: capitalize;
         opacity: 0;
-        animation: fadeInLeft 0.8s ease-out 0.5s forwards;
     }
 
     .hero-description {
@@ -626,7 +624,6 @@ body {
         line-height: 1.8;
         max-width: 600px;
         opacity: 0;
-        animation: fadeInLeft 0.8s ease-out 0.7s forwards;
     }
 
     .hero-buttons {
@@ -634,7 +631,26 @@ body {
         gap: 1rem;
         flex-wrap: wrap;
         opacity: 0;
-        animation: fadeInLeft 0.8s ease-out 0.9s forwards;
+    }
+
+    // Animations déclenchées après le splash screen
+    &.animate {
+        .hero-subtitle {
+            animation: fadeInLeft 0.8s ease-out 0.3s forwards;
+        }
+
+        .hero-title {
+            animation: fadeInLeft 0.8s ease-out 0.5s forwards;
+        }
+
+        .hero-description {
+            animation: fadeInLeft 0.8s ease-out 0.7s forwards;
+        }
+
+        .hero-buttons {
+            animation: fadeInLeft 0.8s ease-out 0.9s forwards;
+        }
+    }
 
         .btn {
             padding: 1rem 2rem;
@@ -680,7 +696,8 @@ body {
             }
         }
     }
-}
+
+
 
 /* ================================================================
    SERVICES SECTION

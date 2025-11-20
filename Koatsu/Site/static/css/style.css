@@ -727,8 +727,6 @@ body {
   margin: 0 0 0.5rem 0;
   letter-spacing: 2px;
   opacity: 0;
-  -webkit-animation: fadeInLeft 0.8s ease-out 0.3s forwards;
-          animation: fadeInLeft 0.8s ease-out 0.3s forwards;
 }
 .hero-section .hero-title {
   font-family: var(--font-titles);
@@ -740,8 +738,6 @@ body {
   line-height: 1.1;
   text-transform: capitalize;
   opacity: 0;
-  -webkit-animation: fadeInLeft 0.8s ease-out 0.5s forwards;
-          animation: fadeInLeft 0.8s ease-out 0.5s forwards;
 }
 .hero-section .hero-description {
   font-family: var(--font-body);
@@ -752,8 +748,6 @@ body {
   line-height: 1.8;
   max-width: 600px;
   opacity: 0;
-  -webkit-animation: fadeInLeft 0.8s ease-out 0.7s forwards;
-          animation: fadeInLeft 0.8s ease-out 0.7s forwards;
 }
 .hero-section .hero-buttons {
   display: -webkit-box;
@@ -763,10 +757,24 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   opacity: 0;
+}
+.hero-section.animate .hero-subtitle {
+  -webkit-animation: fadeInLeft 0.8s ease-out 0.3s forwards;
+          animation: fadeInLeft 0.8s ease-out 0.3s forwards;
+}
+.hero-section.animate .hero-title {
+  -webkit-animation: fadeInLeft 0.8s ease-out 0.5s forwards;
+          animation: fadeInLeft 0.8s ease-out 0.5s forwards;
+}
+.hero-section.animate .hero-description {
+  -webkit-animation: fadeInLeft 0.8s ease-out 0.7s forwards;
+          animation: fadeInLeft 0.8s ease-out 0.7s forwards;
+}
+.hero-section.animate .hero-buttons {
   -webkit-animation: fadeInLeft 0.8s ease-out 0.9s forwards;
           animation: fadeInLeft 0.8s ease-out 0.9s forwards;
 }
-.hero-section .hero-buttons .btn {
+.hero-section .btn {
   padding: 1rem 2rem;
   font-family: var(--font-body);
   font-size: 1rem;
@@ -784,15 +792,15 @@ body {
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
-.hero-section .hero-buttons .btn i {
+.hero-section .btn i {
   font-size: 1rem;
 }
-.hero-section .hero-buttons .btn-primary {
+.hero-section .btn-primary {
   background: var(--accent-color);
   color: var(--white);
   border-color: var(--accent-color);
 }
-.hero-section .hero-buttons .btn-primary:hover {
+.hero-section .btn-primary:hover {
   background: rgb(207.903930131, 98.4279475983, 22.096069869);
   border-color: rgb(207.903930131, 98.4279475983, 22.096069869);
   -webkit-transform: translateY(-2px);
@@ -800,12 +808,12 @@ body {
   -webkit-box-shadow: 0 4px 12px rgba(233, 124, 48, 0.4);
           box-shadow: 0 4px 12px rgba(233, 124, 48, 0.4);
 }
-.hero-section .hero-buttons .btn-secondary {
+.hero-section .btn-secondary {
   background: transparent;
   color: var(--white);
   border-color: var(--white);
 }
-.hero-section .hero-buttons .btn-secondary:hover {
+.hero-section .btn-secondary:hover {
   background: var(--white);
   color: var(--primary-color);
   -webkit-transform: translateY(-2px);

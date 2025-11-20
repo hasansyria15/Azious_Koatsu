@@ -53,7 +53,21 @@ const SplashScreen = {
     setTimeout(() => {
       this.splashElement.style.display = 'none';
       document.body.style.overflow = 'auto';
+      
+      // Déclencher les animations du hero section
+      this.triggerHeroAnimations();
     }, this.config.fadeOutDuration);
+  },
+
+  /**
+   * Déclenche les animations du hero après le splash screen
+   */
+  triggerHeroAnimations() {
+    const heroSection = document.querySelector('.hero-section');
+    
+    if (heroSection) {
+      heroSection.classList.add('animate');
+    }
   }
 };
 
@@ -182,6 +196,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const splashElement = document.getElementById('splashScreen');
     if (splashElement) {
       splashElement.style.display = 'none';
+    }
+    
+    // Déclencher immédiatement les animations du hero
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+      heroSection.classList.add('animate');
     }
   }
 
