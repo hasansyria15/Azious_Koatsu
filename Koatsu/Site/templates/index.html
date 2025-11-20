@@ -65,40 +65,88 @@
 <!-- Services Section -->
 <section class="services-section">
   <div class="container">
-    <h2 class="section-title">Nos Services</h2>
-    <p class="section-description">Solutions de transport complètes pour vos besoins</p>
-    
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fas fa-truck"></i>
+    <div class="services-content">
+      <!-- Carousel à gauche -->
+      <div class="services-carousel">
+        <div class="carousel-container">
+          <div class="carousel-track" id="servicesCarousel">
+            <!-- Slide 1 - Ground Transport -->
+            <div class="carousel-slide active">
+              <img src="{% static 'img/services/service1.png' %}" alt="Ground Transport">
+              <div class="slide-overlay">
+                <div class="slide-icon">
+                  <i class="fas fa-truck"></i>
+                </div>
+                <h3 class="slide-title">Ground Transport</h3>
+                <a href="#" class="slide-link">
+                  <i class="fas fa-arrow-right"></i> Discover More
+                </a>
+              </div>
+            </div>
+
+            <!-- Slide 2 - Ware Housing -->
+            <div class="carousel-slide">
+              <img src="{% static 'img/services/service2.png' %}" alt="Ware Housing">
+              <div class="slide-overlay">
+                <div class="slide-icon">
+                  <i class="fas fa-warehouse"></i>
+                </div>
+                <h3 class="slide-title">Ware Housing</h3>
+                <a href="#" class="slide-link">
+                  <i class="fas fa-arrow-right"></i> Discover More
+                </a>
+              </div>
+            </div>
+
+            <!-- Slide 3 - Air Transport -->
+            <div class="carousel-slide">
+              <img src="{% static 'img/services/service3.png' %}" alt="Air Transport">
+              <div class="slide-overlay">
+                <div class="slide-icon">
+                  <i class="fas fa-plane"></i>
+                </div>
+                <h3 class="slide-title">Air Transport</h3>
+                <a href="#" class="slide-link">
+                  <i class="fas fa-arrow-right"></i> Discover More
+                </a>
+              </div>
+            </div>
+
+            <!-- Slide 4 - Maritime Transport -->
+            <div class="carousel-slide">
+              <img src="{% static 'img/services/service4.png' %}" alt="Maritime Transport">
+              <div class="slide-overlay">
+                <div class="slide-icon">
+                  <i class="fas fa-ship"></i>
+                </div>
+                <h3 class="slide-title">Maritime Transport</h3>
+                <a href="#" class="slide-link">
+                  <i class="fas fa-arrow-right"></i> Discover More
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation dots -->
+          <div class="carousel-dots">
+            <button class="dot active" data-slide="0"></button>
+            <button class="dot" data-slide="1"></button>
+            <button class="dot" data-slide="2"></button>
+            <button class="dot" data-slide="3"></button>
+          </div>
         </div>
-        <h3>Transport Routier</h3>
-        <p>Livraison rapide et sécurisée sur tout le territoire</p>
       </div>
-      
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fas fa-plane"></i>
-        </div>
-        <h3>Transport Aérien</h3>
-        <p>Expéditions internationales express</p>
-      </div>
-      
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fas fa-ship"></i>
-        </div>
-        <h3>Transport Maritime</h3>
-        <p>Solutions logistiques pour vos marchandises</p>
-      </div>
-      
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fas fa-warehouse"></i>
-        </div>
-        <h3>Entreposage</h3>
-        <p>Stockage sécurisé et gestion d'inventaire</p>
+
+      <!-- Texte à droite -->
+      <div class="services-text">
+        <p class="services-subtitle">Core Services</p>
+        <h2 class="services-title">Transport is defined<br>As a movement</h2>
+        <p class="services-description">
+          Transport or transportation is the movement of humans, animals and goods from one location to another. In other words, the action of transport is defined as a particular movement of an organism or thing from a point A to a Point B. Modes of transport include air, land (rail and road) water, cable, pipeline and space. The field can be divided into infrastructure, vehicles and operations. Transport enables trade between people, which is essential for the development of civilizations.
+        </p>
+        <a href="#services" class="btn btn-services">
+          <i class="fas fa-briefcase"></i> More Services
+        </a>
       </div>
     </div>
   </div>
