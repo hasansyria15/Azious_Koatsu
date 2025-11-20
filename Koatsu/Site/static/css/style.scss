@@ -2,9 +2,6 @@
    KOATSU - SCSS Simplifié et Fonctionnel
 ================================================================ */
 
-// Import Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100&family=Inter:wght@200&display=swap');
-
 /* Variables de couleurs KOATSU */
 :root {
     --primary-color: #004E7C; // Bleu acier
@@ -66,15 +63,15 @@ body {
         }
 
         .logo-img {
-            width: 45px;
-            height: 45px;
-            margin-right: 0.75rem;
+            width: 80px;
+            height: 80px;
+            margin-right: 1rem;
         }
 
         .logo-text {
             font-family: var(--font-titles);
             font-weight: 200;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             color: var(--primary-color);
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -84,16 +81,18 @@ body {
 
 /* Navigation principale */
 .main-navigation {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    flex: 1;
+    display: flex;
+    justify-content: center;
 
     .navbar-nav {
         display: flex;
+        flex-direction: row;
         list-style: none;
         gap: 2rem;
         margin: 0;
         padding: 0;
+        align-items: center;
 
         .nav-item {
             .nav-link {
@@ -101,22 +100,34 @@ body {
                 font-weight: 200;
                 color: var(--secondary-color);
                 text-decoration: none;
-                padding: 0.75rem 0;
+                padding: 0.75rem 1rem;
                 font-size: 1rem;
                 transition: color 0.3s ease;
-                display: flex;
-                align-items: center;
+                display: inline-block;
+                white-space: nowrap;
+                position: relative;
 
                 i {
-                    margin-right: 0.5rem;
-                    color: var(--accent-color);
+                    display: none;
+                }
+
+                // Ligne animée au hover
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0.5rem;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background: var(--accent-color);
+                    transition: width 0.4s ease;
                 }
 
                 &:hover {
                     color: var(--primary-color);
 
-                    i {
-                        color: var(--primary-color);
+                    &::after {
+                        width: 100%;
                     }
                 }
             }
@@ -126,6 +137,12 @@ body {
 
 /* Sélecteur de langue */
 .language-selector {
+    position: relative;
+
+    .dropdown {
+        position: relative;
+    }
+
     .btn-language {
         background: var(--primary-color);
         border: 2px solid var(--primary-color);
@@ -135,6 +152,10 @@ body {
         font-weight: 200;
         border-radius: 25px;
         transition: all 0.3s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
 
         &:hover {
             background: transparent;
@@ -143,11 +164,35 @@ body {
     }
 
     .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        right: 0;
+        background: var(--white);
         border: 2px solid var(--primary-color);
         border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        min-width: 160px;
+        padding: 0.5rem 0;
+        list-style: none;
+        margin: 0;
+        z-index: 1000;
+        display: none;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+
+        &.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         .dropdown-item {
+            display: block;
             padding: 0.5rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.2s ease;
 
             &:hover {
                 background: var(--light-bg);
@@ -198,21 +243,535 @@ body {
     }
 }
 
-/* Page d'accueil splash */
+/* ================================================================
+   SPLASH SCREEN - TRANSPORT THEME
+================================================================ */
 .splash-screen {
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #003d5c 50%, var(--accent-color) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease-out;
+    overflow: hidden;
 
-    .logo-header {
-        font-family: var(--font-titles);
-        font-weight: 200;
-        font-size: 4rem;
+    // Effet de particules en arrière-plan
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            radial-gradient(2px 2px at 20% 30%, white, transparent),
+            radial-gradient(2px 2px at 60% 70%, white, transparent),
+            radial-gradient(1px 1px at 50% 50%, white, transparent),
+            radial-gradient(1px 1px at 80% 10%, white, transparent),
+            radial-gradient(2px 2px at 90% 60%, white, transparent),
+            radial-gradient(1px 1px at 33% 80%, white, transparent);
+        opacity: 0.3;
+        animation: twinkle 3s ease-in-out infinite;
+    }
+
+    &.fade-out {
+        opacity: 0;
+    }
+
+    .splash-content {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 600px;
+        padding: 2rem;
+    }
+
+    // Logo et titre
+    .splash-logo {
+        margin-bottom: 3rem;
+        animation: fadeInDown 0.8s ease-out;
+
+        .splash-logo-img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+
+        .splash-title {
+            font-family: var(--font-titles);
+            font-weight: 200;
+            font-size: 3.5rem;
+            color: var(--white);
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            margin: 0 0 0.5rem 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+
+            .splash-text {
+                display: inline-block;
+                opacity: 0;
+                animation: slideInTitle 0.6s ease-out forwards;
+
+                &:first-child {
+                    animation-delay: 0.3s;
+                }
+
+                &:last-child {
+                    animation-delay: 0.5s;
+                }
+            }
+        }
+
+        .splash-tagline {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin: 0;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.8s forwards;
+        }
+    }
+
+    // Animation de transport (route et véhicule)
+    .transport-animation {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        margin: 2rem 0;
+        opacity: 0;
+        animation: fadeIn 0.8s ease-out 1s forwards;
+
+        .road {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+
+            .road-line {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 60px;
+                height: 2px;
+                background: var(--white);
+                animation: roadMove 1.5s linear infinite;
+
+                &:nth-child(1) {
+                    animation-delay: 0s;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: 0.5s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 1s;
+                }
+            }
+        }
+
+        .vehicle {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            font-size: 2.5rem;
+            color: var(--white);
+            animation: vehicleMove 3s ease-in-out infinite;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+
+            i {
+                animation: vehicleBounce 0.3s ease-in-out infinite;
+            }
+        }
+    }
+
+    // Texte et points de chargement
+    .splash-loading {
+        margin-top: 2rem;
+        opacity: 0;
+        animation: fadeIn 0.8s ease-out 1.2s forwards;
+
+        .loading-text {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin: 0 0 1rem 0;
+        }
+
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+
+            .dot {
+                width: 8px;
+                height: 8px;
+                background: var(--white);
+                border-radius: 50%;
+                animation: dotPulse 1.4s ease-in-out infinite;
+
+                &:nth-child(1) {
+                    animation-delay: 0s;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: 0.2s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 0.4s;
+                }
+            }
+        }
+    }
+}
+
+/* ================================================================
+   ANIMATIONS - TRANSPORT THEME
+================================================================ */
+
+// Animation du logo flottant
+@keyframes floatLogo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+// Animation du titre glissant
+@keyframes slideInTitle {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Animation fade in simple
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// Animation fade in depuis le haut
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Animation de la route défilante
+@keyframes roadMove {
+    0% {
+        left: -60px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+// Animation du véhicule se déplaçant
+@keyframes vehicleMove {
+    0% {
+        left: 0;
+        transform: translateX(0);
+    }
+    50% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    100% {
+        left: calc(100% - 50px);
+        transform: translateX(0);
+    }
+}
+
+// Animation de rebond du véhicule
+@keyframes vehicleBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+// Animation des points de chargement
+@keyframes dotPulse {
+    0%, 80%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+}
+
+// Animation des particules scintillantes
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+// Animation fade up
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================================================
+   HERO SECTION - CONTINENTAL TRANSPORTATION
+================================================================ */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding: 2rem 0;
+
+        .container {
+            max-width: 1200px;
+        }
+    }
+
+    .hero-subtitle {
+        font-family: var(--font-body);
+        font-size: 2rem;
+        font-weight: 300;
         color: var(--white);
-        letter-spacing: 4px;
-        text-transform: uppercase;
+        margin: 0 0 0.5rem 0;
+        letter-spacing: 2px;
+        opacity: 0;
+        animation: fadeInLeft 0.8s ease-out 0.3s forwards;
+    }
+
+    .hero-title {
+        font-family: var(--font-titles);
+        font-size: 5rem;
+        font-weight: 700;
+        color: var(--white);
+        margin: 0 0 1.5rem 0;
+        letter-spacing: 1px;
+        line-height: 1.1;
+        text-transform: capitalize;
+        opacity: 0;
+        animation: fadeInLeft 0.8s ease-out 0.5s forwards;
+    }
+
+    .hero-description {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.95);
+        margin: 0 0 2.5rem 0;
+        line-height: 1.8;
+        max-width: 600px;
+        opacity: 0;
+        animation: fadeInLeft 0.8s ease-out 0.7s forwards;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        opacity: 0;
+        animation: fadeInLeft 0.8s ease-out 0.9s forwards;
+
+        .btn {
+            padding: 1rem 2rem;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 400;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+
+            i {
+                font-size: 1rem;
+            }
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: var(--white);
+            border-color: var(--accent-color);
+
+            &:hover {
+                background: darken(#E97C30, 10%);
+                border-color: darken(#E97C30, 10%);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(233, 124, 48, 0.4);
+            }
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+
+            &:hover {
+                background: var(--white);
+                color: var(--primary-color);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+}
+
+/* ================================================================
+   SERVICES SECTION
+================================================================ */
+.services-section {
+    padding: 6rem 0;
+    background: var(--light-bg);
+
+    .section-title {
+        font-family: var(--font-titles);
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        text-align: center;
+        margin: 0 0 1rem 0;
+    }
+
+    .section-description {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        color: var(--secondary-color);
+        text-align: center;
+        margin: 0 0 3rem 0;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .service-card {
+        background: var(--white);
+        padding: 2.5rem 2rem;
+        border-radius: 8px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px rgba(0, 78, 124, 0.15);
+
+            .service-icon {
+                background: var(--primary-color);
+                color: var(--white);
+                transform: scale(1.1);
+            }
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--light-bg);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        h3 {
+            font-family: var(--font-titles);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0 0 1rem 0;
+        }
+
+        p {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            line-height: 1.6;
+            margin: 0;
+        }
+    }
+}
+
+/* Animation fade in from left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

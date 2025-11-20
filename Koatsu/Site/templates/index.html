@@ -1,9 +1,107 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
 
-<section class="splash-screen">
-    <h1 class="logo-header">
-        <span class="logo">KOA</span><span class="logo">TSU</span>
-    </h1>
+<!-- Splash Screen -->
+<section id="splashScreen" class="splash-screen">
+  <div class="splash-content">
+    <!-- Logo et titre -->
+    <div class="splash-logo">
+      <img src="{% static 'img/logo.png' %}" alt="KOATSU Logo" class="splash-logo-img">
+      <h1 class="splash-title">
+        <span class="splash-text">KOA</span><span class="splash-text">TSU</span>
+      </h1>
+      <p class="splash-tagline">Transport & Logistique</p>
+    </div>
+
+    <!-- Animation de transport -->
+    <div class="transport-animation">
+      <div class="road">
+        <div class="road-line"></div>
+        <div class="road-line"></div>
+        <div class="road-line"></div>
+      </div>
+      <div class="vehicle">
+        <i class="fas fa-truck"></i>
+      </div>
+    </div>
+
+    <!-- Texte de chargement -->
+    <div class="splash-loading">
+      <p class="loading-text">Chargement en cours...</p>
+      <div class="loading-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- Hero Section - Continental Transportation -->
+<section class="hero-section" style="background-image: url('{% static 'img/background/background1.jpg' %}');">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="container">
+      <h2 class="hero-subtitle">Continental</h2>
+      <h1 class="hero-title">Transportation</h1>
+      <p class="hero-description">
+        Transport or transportation is the movement of humans, animals<br>
+        and goods from one location to another.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-file-invoice"></i> Request Quote
+        </a>
+        <a href="#about" class="btn btn-secondary">
+          <i class="fas fa-arrow-right"></i> Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+  <div class="container">
+    <h2 class="section-title">Nos Services</h2>
+    <p class="section-description">Solutions de transport complètes pour vos besoins</p>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-truck"></i>
+        </div>
+        <h3>Transport Routier</h3>
+        <p>Livraison rapide et sécurisée sur tout le territoire</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-plane"></i>
+        </div>
+        <h3>Transport Aérien</h3>
+        <p>Expéditions internationales express</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-ship"></i>
+        </div>
+        <h3>Transport Maritime</h3>
+        <p>Solutions logistiques pour vos marchandises</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-warehouse"></i>
+        </div>
+        <h3>Entreposage</h3>
+        <p>Stockage sécurisé et gestion d'inventaire</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

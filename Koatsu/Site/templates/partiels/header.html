@@ -6,7 +6,7 @@
     <!-- Logo KOATSU - À gauche -->
     <div class="logo-container">
       <a class="navbar-brand" href="/">
-        <img src="{% static 'images/logo.png' %}" alt="KOATSU Logo" class="logo-img" />
+        <img src="{% static 'img/logo.png' %}" alt="KOATSU Logo" class="logo-img" />
         <span class="logo-text">KOATSU</span>
       </a>
     </div>
@@ -15,24 +15,16 @@
     <div class="main-navigation">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/">
-            <i class="fas fa-home"></i> Accueil
-          </a>
+          <a class="nav-link" href="/">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/a-propos">
-            <i class="fas fa-info-circle"></i> À propos
-          </a>
+          <a class="nav-link" href="/a-propos">À propos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/services">
-            <i class="fas fa-cogs"></i> Nos Services
-          </a>
+          <a class="nav-link" href="/services">Nos Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contact">
-            <i class="fas fa-envelope"></i> Contact
-          </a>
+          <a class="nav-link" href="/contact">Contact</a>
         </li>
       </ul>
 
@@ -45,27 +37,15 @@
     <!-- Sélecteur de langue - À droite -->
     <div class="language-selector">
       <div class="dropdown">
-        <button class="btn btn-language dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown"
-          aria-expanded="false">
+        <button class="btn btn-language dropdown-toggle" type="button" id="languageDropdown">
           <i class="fas fa-globe"></i> FR
         </button>
-        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+        <ul class="dropdown-menu" id="languageMenu">
           <li><a class="dropdown-item" href="?lang=fr">🇫🇷 Français</a></li>
           <li><a class="dropdown-item" href="?lang=en">🇺🇸 English</a></li>
-          <li><a class="dropdown-item" href="?lang=es">🇪🇸 Español</a></li>
+          <li><a class="dropdown-item" href="?lang=ja">🇯🇵 Japonais</a></li>
         </ul>
       </div>
     </div>
   </div>
 </header>
-
-<script>
-  function toggleMobileNav() {
-    const mobileNav = document.querySelector('.main-navigation .navbar-nav');
-    mobileNav.classList.toggle('show');
-
-    const toggleBtn = document.querySelector('.mobile-nav-toggle i');
-    toggleBtn.classList.toggle('fa-bars');
-    toggleBtn.classList.toggle('fa-times');
-  }
-</script>
