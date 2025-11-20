@@ -6,9 +6,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!--Partie Titre-->
-    <title>{% block title %}KOATSU{% endblock %}</title>
-
+    <title>{% block title %}KOATSU - Continental Transportation & Logistics{% endblock %}</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="{% block meta_description %}KOATSU - Professional transport and logistics services. Ground transport, air freight, maritime shipping, and warehousing solutions. Fast, reliable, and efficient continental transportation.{% endblock %}">
+    
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="{% block meta_keywords %}transport, logistics, shipping, freight, ground transport, air transport, maritime transport, warehousing, continental transportation{% endblock %}">
+    
+    <!-- Author -->
+    <meta name="author" content="KOATSU Global">
+    
     <!--icon de site-->
     <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
 
@@ -91,9 +101,9 @@
 
     <!-- Alternate Languages -->
     <link rel="alternate" hreflang="fr" href="{% block hreflang_fr %}{{ request.build_absolute_uri }}{% endblock %}">
-    <link rel="alternate" hreflang="en" href="{% block hreflang_en %}{% endblock %}">
-    <link rel="alternate" hreflang="x-default"
-        href="{% block hreflang_default %}{{ request.build_absolute_uri }}{% endblock %}">
+    <link rel="alternate" hreflang="en" href="{% block hreflang_en %}{{ request.build_absolute_uri }}{% endblock %}">
+    <link rel="alternate" hreflang="ja" href="{% block hreflang_ja %}{{ request.build_absolute_uri }}{% endblock %}">
+    <link rel="alternate" hreflang="x-default" href="{% block hreflang_default %}{{ request.build_absolute_uri }}{% endblock %}">
 
 
     <!-- Security Headers -->
