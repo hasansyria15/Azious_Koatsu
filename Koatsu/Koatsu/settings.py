@@ -23,9 +23,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*ys0se7o1i7h2ohkc%u@30v#s0-)acqtv59##*g7l!tg+=^ma^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False  # IMPORTANT : False en production !
 
-ALLOWED_HOSTS = []
+# En production sur PythonAnywhere
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'www.koatsu-global.com',
+    'koatsu-global.com',
+    '*.pythonanywhere.com',  # Pour votre domaine PythonAnywhere
+]
 
 
 # Application definition
@@ -42,13 +49,13 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # WhiteNoise pour PythonAnywhere
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'Koatsu.middleware.StaticFileCacheMiddleware',  # Cache pour les fichiers statiques
 ]
 
 ROOT_URLCONF = 'Koatsu.urls'
@@ -134,6 +141,17 @@ STATICFILES_DIRS = [
     BASE_DIR / 'Site' / 'static',
 ]
 
+# WhiteNoise Configuration pour PythonAnywhere
+# Compression et cache des fichiers statiques
+STORAGES = {
+    'default': {
+        'BACKEND': 'django.core.files.storage.FileSystemStorage',
+    },
+    'staticfiles': {
+        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+    },
+}
+
 # Configuration du cache
 CACHES = {
     'default': {
@@ -143,10 +161,14 @@ CACHES = {
     }
 }
 
-# Cache pour les fichiers statiques en production
+# Configuration de sécurité pour la production
 if not DEBUG:
-    # En production, utiliser des durées de cache plus longues
-    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    X_FRAME_OPTIONS = 'DENY'
 
 
 # Default primary key field type
