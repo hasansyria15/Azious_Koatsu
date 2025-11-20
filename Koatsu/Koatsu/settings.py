@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'Koatsu.middleware.StaticFileCacheMiddleware',  # Cache pour les fichiers statiques
 ]
 
 ROOT_URLCONF = 'Koatsu.urls'
@@ -124,6 +125,7 @@ ALLOWED_HOSTS = [
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
+
 STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -131,6 +133,20 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / 'Site' / 'static',
 ]
+
+# Configuration du cache
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
+        'TIMEOUT': 300,  # 5 minutes par défaut
+    }
+}
+
+# Cache pour les fichiers statiques en production
+if not DEBUG:
+    # En production, utiliser des durées de cache plus longues
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 
 # Default primary key field type
