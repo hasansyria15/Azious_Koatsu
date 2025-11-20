@@ -40,11 +40,11 @@
 </section>
 
 <!-- Hero Section - Continental Transportation -->
-<section class="hero-section" style="background-image: url('{% static 'img/background/background1.jpg' %}');">
+<section class="hero-section" style="background-image: url('{% static 'img/background/background1.jpg' %}');" role="banner">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="container">
-      <h2 class="hero-subtitle">Continental</h2>
+      <p class="hero-subtitle">Continental</p>
       <h1 class="hero-title">Transportation</h1>
       <p class="hero-description">
         Transport or transportation is the movement of humans, animals<br>
@@ -128,11 +128,11 @@
           </div>
 
           <!-- Navigation dots -->
-          <div class="carousel-dots">
-            <button class="dot active" data-slide="0"></button>
-            <button class="dot" data-slide="1"></button>
-            <button class="dot" data-slide="2"></button>
-            <button class="dot" data-slide="3"></button>
+          <div class="carousel-dots" role="tablist" aria-label="Services carousel navigation">
+            <button class="dot active" data-slide="0" role="tab" aria-label="Go to slide 1 - Ground Transport" aria-selected="true"></button>
+            <button class="dot" data-slide="1" role="tab" aria-label="Go to slide 2 - Ware Housing" aria-selected="false"></button>
+            <button class="dot" data-slide="2" role="tab" aria-label="Go to slide 3 - Air Transport" aria-selected="false"></button>
+            <button class="dot" data-slide="3" role="tab" aria-label="Go to slide 4 - Maritime Transport" aria-selected="false"></button>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@
       <!-- Texte à droite -->
       <div class="services-text">
         <p class="services-subtitle">Core Services</p>
-        <h2 class="services-title">Transport is defined<br>As a movement</h2>
+        <h2 class="services-title">Transport is defined As a movement</h2>
         <p class="services-description">
           Transport or transportation is the movement of humans, animals and goods from one location to another. In other words, the action of transport is defined as a particular movement of an organism or thing from a point A to a Point B. Modes of transport include air, land (rail and road) water, cable, pipeline and space. The field can be divided into infrastructure, vehicles and operations. Transport enables trade between people, which is essential for the development of civilizations.
         </p>
@@ -159,12 +159,12 @@
       <!-- Étapes à gauche -->
       <div class="quote-steps">
         <p class="quote-subtitle">How It Works</p>
-        <h2 class="quote-title">Transport Fixed<br>Consists Of Fixed.</h2>
+        <h2 class="quote-title">Transport Fixed Consists Of Fixed.</h2>
 
         <div class="steps-list">
           <!-- Étape 1 -->
           <div class="step-item">
-            <div class="step-number">01</div>
+            <div class="step-number" aria-hidden="true">01</div>
             <div class="step-info">
               <h3 class="step-title">Entrer vos coordonnées</h3>
               <p class="step-description">Fournissez-nous vos informations de contact afin que nous puissions vous joindre rapidement. Votre nom et votre adresse courriel sont essentiels pour traiter votre demande.</p>
@@ -173,7 +173,7 @@
 
           <!-- Étape 2 -->
           <div class="step-item">
-            <div class="step-number">02</div>
+            <div class="step-number" aria-hidden="true">02</div>
             <div class="step-info">
               <h3 class="step-title">Entrer les détails de ce que vous voulez</h3>
               <p class="step-description">Décrivez en détail vos besoins en matière de transport et logistique. Plus vous nous donnez d'informations, mieux nous pourrons répondre à vos attentes.</p>
@@ -182,7 +182,7 @@
 
           <!-- Étape 3 -->
           <div class="step-item">
-            <div class="step-number">03</div>
+            <div class="step-number" aria-hidden="true">03</div>
             <div class="step-info">
               <h3 class="step-title">Nous allons vous contacter</h3>
               <p class="step-description">Notre équipe d'experts prendra contact avec vous dans les plus brefs délais pour discuter de votre projet et vous proposer la meilleure solution de transport.</p>
@@ -199,41 +199,53 @@
           <form id="quoteForm" class="quote-form">
             <!-- Champ Nom -->
             <div class="form-group">
+              <label for="userName" class="visually-hidden">Your Name</label>
               <input 
                 type="text" 
                 id="userName" 
                 name="name" 
                 placeholder="Enter your name"
+                aria-label="Enter your full name"
+                aria-required="true"
+                aria-describedby="userName-error"
                 required
               >
-              <i class="fas fa-user form-icon"></i>
-              <span class="error-message">The field is required.</span>
+              <i class="fas fa-user form-icon" aria-hidden="true"></i>
+              <span class="error-message" id="userName-error" role="alert">The field is required.</span>
             </div>
 
             <!-- Champ Email -->
             <div class="form-group">
+              <label for="userEmail" class="visually-hidden">Your Email</label>
               <input 
                 type="email" 
                 id="userEmail" 
                 name="email" 
                 placeholder="Enter your email"
+                aria-label="Enter your email address"
+                aria-required="true"
+                aria-describedby="userEmail-error"
                 required
               >
-              <i class="fas fa-envelope form-icon"></i>
-              <span class="error-message">The field is required.</span>
+              <i class="fas fa-envelope form-icon" aria-hidden="true"></i>
+              <span class="error-message" id="userEmail-error" role="alert">The field is required.</span>
             </div>
 
             <!-- Champ Détails -->
             <div class="form-group">
+              <label for="userDetails" class="visually-hidden">Your Requirements</label>
               <textarea 
                 id="userDetails" 
                 name="details" 
                 rows="5"
                 placeholder="Enter your details & requirements"
+                aria-label="Enter your details and requirements"
+                aria-required="true"
+                aria-describedby="userDetails-error"
                 required
               ></textarea>
-              <i class="fas fa-comment form-icon"></i>
-              <span class="error-message">The field is required.</span>
+              <i class="fas fa-comment form-icon" aria-hidden="true"></i>
+              <span class="error-message" id="userDetails-error" role="alert">The field is required.</span>
             </div>
 
             <!-- Bouton Submit -->
@@ -252,7 +264,7 @@
   <div class="container">
     <div class="section-header text-center">
       <h2 class="section-title">Our Place</h2>
-      <div class="title-underline"></div>
+      <div class="title-underline" aria-hidden="true"></div>
     </div>
     <div class="contact-content">
       <!-- Carte Google Maps -->
@@ -264,7 +276,9 @@
           style="border:0;" 
           allowfullscreen="" 
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          referrerpolicy="no-referrer-when-downgrade"
+          title="KOATSU Tokyo Office Location - Google Maps"
+          aria-label="Interactive map showing KOATSU Tokyo office location in Harajuku, Shibuya-ku">
         </iframe>
       </div>
 

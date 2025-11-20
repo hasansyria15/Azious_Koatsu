@@ -29,16 +29,28 @@
       </ul>
 
       <!-- Mobile Navigation Toggle -->
-      <button class="mobile-nav-toggle" type="button" onclick="toggleMobileNav()">
-        <i class="fas fa-bars"></i>
+      <button class="mobile-nav-toggle" 
+              type="button" 
+              onclick="toggleMobileNav()" 
+              aria-label="Toggle mobile navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+        <span class="sr-only">Menu</span>
       </button>
     </div>
 
     <!-- Sélecteur de langue - À droite -->
     <div class="language-selector">
       <div class="dropdown">
-        <button class="btn btn-language dropdown-toggle" type="button" id="languageDropdown">
-          <i class="fas fa-globe"></i> FR
+        <button class="btn btn-language dropdown-toggle" 
+                type="button" 
+                id="languageDropdown"
+                aria-label="Select language"
+                aria-haspopup="true"
+                aria-expanded="false">
+          <i class="fas fa-globe" aria-hidden="true"></i> 
+          <span>FR</span>
         </button>
         <ul class="dropdown-menu" id="languageMenu">
           <li><a class="dropdown-item" href="?lang=fr">🇫🇷 Français</a></li>
