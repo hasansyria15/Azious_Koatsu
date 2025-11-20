@@ -1203,6 +1203,236 @@ body {
     }
 }
 
+/* ================================================================
+   CONTACT & MAP SECTION
+================================================================ */
+.contact-section {
+    padding: 6rem 0;
+    background: var(--white);
+
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 78, 124, 0.15);
+        min-height: 700px;
+    }
+
+    // Carte Google Maps à gauche
+    .contact-map {
+        position: relative;
+        height: 100%;
+        min-height: 700px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    }
+
+    // Informations de contact à droite
+    .contact-info {
+        background: var(--primary-color);
+        padding: 4rem 3rem;
+        display: flex;
+        align-items: center;
+
+        .contact-card {
+            width: 100%;
+        }
+
+        .contact-header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+            .contact-title {
+                font-family: var(--font-titles);
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: var(--white);
+                margin: 0 0 0.5rem 0;
+            }
+
+            .contact-subtitle {
+                font-family: var(--font-body);
+                font-size: 1.2rem;
+                font-weight: 300;
+                color: var(--accent-color);
+                margin: 0;
+                letter-spacing: 1px;
+            }
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateX(10px);
+
+                .contact-icon {
+                    background: var(--accent-color);
+                    transform: scale(1.1);
+
+                    i {
+                        color: var(--white);
+                    }
+                }
+            }
+
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                transition: all 0.3s ease;
+
+                i {
+                    color: var(--accent-color);
+                    font-size: 1.3rem;
+                    transition: color 0.3s ease;
+                }
+            }
+
+            .contact-text {
+                flex: 1;
+
+                .contact-label {
+                    font-family: var(--font-body);
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    color: rgba(255, 255, 255, 0.7);
+                    display: block;
+                    margin-bottom: 0.4rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .contact-value {
+                    font-family: var(--font-body);
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    color: var(--white);
+                    text-decoration: none;
+                    display: block;
+                    line-height: 1.6;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: var(--accent-color);
+                    }
+                }
+
+                p.contact-value {
+                    margin: 0;
+                }
+            }
+        }
+
+        .btn-contact {
+            width: 100%;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 1.2rem 2rem;
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 500;
+            border: 2px solid var(--accent-color);
+            border-radius: 6px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: transparent;
+                border-color: var(--white);
+                color: var(--white);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(233, 124, 48, 0.3);
+            }
+
+            i {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    // Animations déclenchées au scroll
+    &:not(.animate) {
+        .contact-map {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .contact-info {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+    }
+
+    &.animate {
+        .contact-map {
+            animation: fadeInLeft 0.8s ease-out 0.3s forwards;
+        }
+
+        .contact-info {
+            animation: fadeInRight 0.8s ease-out 0.5s forwards;
+        }
+    }
+
+    // Responsive
+    @media (max-width: 992px) {
+        .contact-content {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-map {
+            height: 400px;
+        }
+
+        .contact-info {
+            padding: 3rem 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 4rem 0;
+
+        .contact-map {
+            height: 300px;
+        }
+
+        .contact-info {
+            padding: 2rem 1.5rem;
+
+            .contact-header .contact-title {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
 /* Animation fade in from left */
 @keyframes fadeInLeft {
     from {

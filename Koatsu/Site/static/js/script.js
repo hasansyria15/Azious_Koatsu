@@ -223,6 +223,12 @@ const ScrollAnimations = {
     if (quoteSection) {
       observer.observe(quoteSection);
     }
+
+    // Observer la section contact
+    const contactSection = document.querySelector('.contact-section');
+    if (contactSection) {
+      observer.observe(contactSection);
+    }
   }
 };
 
