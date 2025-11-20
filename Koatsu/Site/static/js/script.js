@@ -476,6 +476,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ServicesCarousel.init();
   ScrollAnimations.init();
   QuoteForm.init();
+  ScrollToTop.init();
   
   // Afficher le splash screen uniquement à la première visite
   if (Utils.isFirstVisit()) {
@@ -499,6 +500,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ============================================================
+// SCROLL TO TOP BUTTON
+// ============================================================
+const ScrollToTop = {
+  init() {
+    this.button = document.getElementById('scrollToTop');
+    if (!this.button) return;
+
+    this.bindEvents();
+    this.checkScroll();
+  },
+
+  bindEvents() {
+    // Show/hide button on scroll
+    window.addEventListener('scroll', () => this.checkScroll());
+    
+    // Scroll to top on click
+    this.button.addEventListener('click', () => this.scrollToTop());
+  },
+
+  checkScroll() {
+    if (window.pageYOffset > 300) {
+      this.button.classList.add('show');
+    } else {
+      this.button.classList.remove('show');
+    }
+  },
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+};
+
+// ============================================================
 // EXPORT POUR UTILISATION GLOBALE (si nécessaire)
 // ============================================================
 window.KOATSU = {
@@ -507,5 +544,6 @@ window.KOATSU = {
   ServicesCarousel,
   ScrollAnimations,
   QuoteForm,
+  ScrollToTop,
   Utils
 };

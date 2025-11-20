@@ -1210,6 +1210,26 @@ body {
     padding: 6rem 0;
     background: var(--white);
 
+    .section-header {
+        margin-bottom: 4rem;
+
+        .section-title {
+            font-family: var(--font-titles);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .title-underline {
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+    }
+
     .contact-content {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
@@ -1442,5 +1462,291 @@ body {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* ================================================================
+   FOOTER SECTION
+================================================================ */
+.footer {
+    background: var(--secondary-color);
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+
+    .footer-main {
+        padding: 5rem 0 3rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 3rem;
+    }
+
+    // Company Info Column
+    .footer-about {
+        .footer-logo {
+            margin-bottom: 1.5rem;
+
+            img {
+                width: 180px;
+                height: auto;
+            }
+        }
+
+        .footer-description {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+
+            .social-link {
+                width: 40px;
+                height: 40px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--white);
+                font-size: 1rem;
+                transition: all 0.3s ease;
+                border: 1px solid transparent;
+
+                &:hover {
+                    background: var(--accent-color);
+                    border-color: var(--accent-color);
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
+
+    // Links Columns
+    .footer-column {
+        .footer-title {
+            font-family: var(--font-titles);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 50px;
+                height: 3px;
+                background: var(--accent-color);
+                border-radius: 2px;
+            }
+        }
+
+        .footer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-bottom: 0.8rem;
+
+                a {
+                    font-family: var(--font-body);
+                    font-size: 0.95rem;
+                    color: rgba(255, 255, 255, 0.7);
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    display: inline-flex;
+                    align-items: center;
+                    position: relative;
+                    padding-left: 0;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        width: 0;
+                        height: 1px;
+                        background: var(--accent-color);
+                        transition: width 0.3s ease;
+                    }
+
+                    &:hover {
+                        color: var(--accent-color);
+                        padding-left: 15px;
+
+                        &::before {
+                            width: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Working Hours
+    .footer-contact {
+        .footer-hours {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+
+            li {
+                margin-bottom: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.8rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                .hours-label {
+                    font-family: var(--font-body);
+                    font-size: 0.95rem;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+
+                .hours-time {
+                    font-family: var(--font-body);
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                    color: var(--accent-color);
+                }
+            }
+        }
+
+        .footer-info-text {
+            background: rgba(0, 78, 124, 0.3);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+
+            p {
+                font-family: var(--font-body);
+                font-size: 0.9rem;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.8);
+                margin: 0;
+
+                strong {
+                    color: var(--white);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    // Footer Bottom
+    .footer-bottom {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 2rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        .footer-bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+
+            a {
+                font-family: var(--font-body);
+                font-size: 0.9rem;
+                color: rgba(255, 255, 255, 0.6);
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+
+    // Scroll to Top Button
+    .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--accent-color);
+        color: var(--white);
+        border: none;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(233, 124, 48, 0.4);
+        transition: all 0.3s ease;
+        z-index: 1000;
+
+        &:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 78, 124, 0.4);
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    // Responsive Design
+    @media (max-width: 1024px) {
+        .footer-content {
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-main {
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .footer-bottom-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer-bottom-links {
+            justify-content: center;
+        }
+
+        .scroll-top {
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            font-size: 1rem;
+        }
     }
 }
