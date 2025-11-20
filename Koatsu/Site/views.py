@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Vue simple de la page d'accueil
+def index(request):
+    return render(request, 'index.html', {
+        'title': 'Accueil - KOATSU',
+        'message': 'Bienvenue sur KOATSU!'
+    })
