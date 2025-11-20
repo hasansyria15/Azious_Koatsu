@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*ys0se7o1i7h2ohkc%u@30v#s0-)acqtv59##*g7l!tg+=^ma^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # IMPORTANT : False en production !
+DEBUG = True  # Mettez False après avoir testé
 
 # En production sur PythonAnywhere
 ALLOWED_HOSTS = [
@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'www.koatsu-global.com',
     'koatsu-global.com',
-    '*.pythonanywhere.com',  # Pour votre domaine PythonAnywhere
+    '*.pythonanywhere.com',  # Tous les sous-domaines PythonAnywhere
 ]
 
 
@@ -119,15 +119,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-#
-ALLOWED_HOSTS = [
-    'localhost',
-    "127.0.0.1",
-    "www.koatsu-global.com"
-]
-
-# Static
-
 
 
 # Static files (CSS, JavaScript, Images)
@@ -162,10 +153,11 @@ CACHES = {
 }
 
 # Configuration de sécurité pour la production
+# ⚠️ Activez ces paramètres UNIQUEMENT si vous avez HTTPS configuré
 if not DEBUG:
-    SECURE_SSL_REDIRECT = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
+    # SECURE_SSL_REDIRECT = True  # Désactivé pour éviter les problèmes
+    # SESSION_COOKIE_SECURE = True  # Désactivé pour éviter les problèmes
+    # CSRF_COOKIE_SECURE = True  # Désactivé pour éviter les problèmes
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
     X_FRAME_OPTIONS = 'DENY'
