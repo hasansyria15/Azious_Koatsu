@@ -152,4 +152,99 @@
   </div>
 </section>
 
+<!-- Quote Request Section -->
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-content">
+      <!-- Étapes à gauche -->
+      <div class="quote-steps">
+        <p class="quote-subtitle">How It Works</p>
+        <h2 class="quote-title">Transport Fixed<br>Consists Of Fixed.</h2>
+
+        <div class="steps-list">
+          <!-- Étape 1 -->
+          <div class="step-item">
+            <div class="step-number">01</div>
+            <div class="step-info">
+              <h3 class="step-title">Entrer vos coordonnées</h3>
+              <p class="step-description">Fournissez-nous vos informations de contact afin que nous puissions vous joindre rapidement. Votre nom et votre adresse courriel sont essentiels pour traiter votre demande.</p>
+            </div>
+          </div>
+
+          <!-- Étape 2 -->
+          <div class="step-item">
+            <div class="step-number">02</div>
+            <div class="step-info">
+              <h3 class="step-title">Entrer les détails de ce que vous voulez</h3>
+              <p class="step-description">Décrivez en détail vos besoins en matière de transport et logistique. Plus vous nous donnez d'informations, mieux nous pourrons répondre à vos attentes.</p>
+            </div>
+          </div>
+
+          <!-- Étape 3 -->
+          <div class="step-item">
+            <div class="step-number">03</div>
+            <div class="step-info">
+              <h3 class="step-title">Nous allons vous contacter</h3>
+              <p class="step-description">Notre équipe d'experts prendra contact avec vous dans les plus brefs délais pour discuter de votre projet et vous proposer la meilleure solution de transport.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire à droite -->
+      <div class="quote-form-container">
+        <div class="quote-form-card">
+          <h3 class="form-heading">We Are here<br>Get A Free Quote</h3>
+
+          <form id="quoteForm" class="quote-form">
+            <!-- Champ Nom -->
+            <div class="form-group">
+              <input 
+                type="text" 
+                id="userName" 
+                name="name" 
+                placeholder="Enter your name"
+                required
+              >
+              <i class="fas fa-user form-icon"></i>
+              <span class="error-message">The field is required.</span>
+            </div>
+
+            <!-- Champ Email -->
+            <div class="form-group">
+              <input 
+                type="email" 
+                id="userEmail" 
+                name="email" 
+                placeholder="Enter your email"
+                required
+              >
+              <i class="fas fa-envelope form-icon"></i>
+              <span class="error-message">The field is required.</span>
+            </div>
+
+            <!-- Champ Détails -->
+            <div class="form-group">
+              <textarea 
+                id="userDetails" 
+                name="details" 
+                rows="5"
+                placeholder="Enter your details & requirements"
+                required
+              ></textarea>
+              <i class="fas fa-comment form-icon"></i>
+              <span class="error-message">The field is required.</span>
+            </div>
+
+            <!-- Bouton Submit -->
+            <button type="submit" class="btn btn-submit">
+              <i class="fas fa-paper-plane"></i> Submit Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

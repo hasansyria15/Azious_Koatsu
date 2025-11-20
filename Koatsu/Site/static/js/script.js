@@ -217,8 +217,155 @@ const ScrollAnimations = {
     if (servicesSection) {
       observer.observe(servicesSection);
     }
+
+    // Observer la section quote
+    const quoteSection = document.querySelector('.quote-section');
+    if (quoteSection) {
+      observer.observe(quoteSection);
+    }
   }
 };
+
+
+// ============================================================
+// QUOTE FORM MODULE
+// ============================================================
+const QuoteForm = {
+  /**
+   * Initialise le formulaire de demande de soumission
+   */
+  init() {
+    this.form = document.getElementById('quoteForm');
+    
+    if (!this.form) {
+      return;
+    }
+
+    this.setupFormValidation();
+  },
+
+  /**
+   * Configure la validation du formulaire
+   */
+  setupFormValidation() {
+    this.form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      if (this.validateForm()) {
+        this.submitForm();
+      }
+    });
+
+    // Validation en temps réel
+    const inputs = this.form.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        this.validateField(input);
+      });
+
+      input.addEventListener('input', () => {
+        // Retirer l'erreur si l'utilisateur tape
+        if (input.value.trim()) {
+          this.clearError(input);
+        }
+      });
+    });
+  },
+
+  /**
+   * Valide un champ individuel
+   */
+  validateField(field) {
+    const formGroup = field.closest('.form-group');
+    const value = field.value.trim();
+
+    if (!value) {
+      this.showError(formGroup, 'The field is required.');
+      return false;
+    }
+
+    // Validation email
+    if (field.type === 'email') {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(value)) {
+        this.showError(formGroup, 'Please enter a valid email address.');
+        return false;
+      }
+    }
+
+    this.clearError(formGroup);
+    return true;
+  },
+
+  /**
+   * Valide tout le formulaire
+   */
+  validateForm() {
+    const inputs = this.form.querySelectorAll('input, textarea');
+    let isValid = true;
+
+    inputs.forEach(input => {
+      if (!this.validateField(input)) {
+        isValid = false;
+      }
+    });
+
+    return isValid;
+  },
+
+  /**
+   * Affiche une erreur sur un champ
+   */
+  showError(formGroup, message) {
+    formGroup.classList.add('has-error');
+    const errorMessage = formGroup.querySelector('.error-message');
+    if (errorMessage) {
+      errorMessage.textContent = message;
+    }
+  },
+
+  /**
+   * Retire l'erreur d'un champ
+   */
+  clearError(formGroup) {
+    if (formGroup) {
+      formGroup.classList.remove('has-error');
+    }
+  },
+
+  /**
+   * Soumet le formulaire
+   */
+  submitForm() {
+    const formData = {
+      name: document.getElementById('userName').value,
+      email: document.getElementById('userEmail').value,
+      details: document.getElementById('userDetails').value
+    };
+
+    console.log('Form submitted:', formData);
+
+    // Simuler l'envoi (remplacer par un vrai appel API)
+    this.showSuccessMessage();
+    this.form.reset();
+  },
+
+  /**
+   * Affiche un message de succès
+   */
+  showSuccessMessage() {
+    const submitBtn = this.form.querySelector('.btn-submit');
+    const originalText = submitBtn.innerHTML;
+
+    submitBtn.innerHTML = '<i class="fas fa-check"></i> Submitted Successfully!';
+    submitBtn.style.background = '#4caf50';
+
+    setTimeout(() => {
+      submitBtn.innerHTML = originalText;
+      submitBtn.style.background = '';
+    }, 3000);
+  }
+}
 
 
 // ============================================================
@@ -322,6 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Navigation.init();
   ServicesCarousel.init();
   ScrollAnimations.init();
+  QuoteForm.init();
   
   // Afficher le splash screen uniquement à la première visite
   if (Utils.isFirstVisit()) {
@@ -352,5 +500,6 @@ window.KOATSU = {
   Navigation,
   ServicesCarousel,
   ScrollAnimations,
+  QuoteForm,
   Utils
 };

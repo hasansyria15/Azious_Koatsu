@@ -1072,6 +1072,273 @@ body {
   }
 }
 
+/* ================================================================
+   QUOTE REQUEST SECTION
+================================================================ */
+.quote-section {
+  padding: 6rem 0;
+  background: var(--light-bg);
+}
+.quote-section .quote-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.quote-section .quote-steps {
+  opacity: 0;
+}
+.quote-section .quote-steps .quote-subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--accent-color);
+  margin: 0 0 1rem 0;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.quote-section .quote-steps .quote-title {
+  font-family: var(--font-titles);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 3rem 0;
+  line-height: 1.2;
+}
+.quote-section .quote-steps .steps-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+.quote-section .quote-steps .step-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.quote-section .quote-steps .step-item:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+.quote-section .quote-steps .step-item:hover .step-number {
+  background: var(--accent-color);
+  color: var(--white);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.quote-section .quote-steps .step-item .step-number {
+  width: 70px;
+  height: 70px;
+  background: var(--white);
+  color: var(--accent-color);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: var(--font-titles);
+  font-size: 1.5rem;
+  font-weight: 600;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-shadow: 0 4px 12px rgba(233, 124, 48, 0.2);
+          box-shadow: 0 4px 12px rgba(233, 124, 48, 0.2);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.quote-section .quote-steps .step-item .step-info .step-title {
+  font-family: var(--font-titles);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem 0;
+}
+.quote-section .quote-steps .step-item .step-info .step-description {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--secondary-color);
+  line-height: 1.7;
+  margin: 0;
+}
+.quote-section .quote-form-container {
+  opacity: 0;
+}
+.quote-section .quote-form-container .quote-form-card {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 8px 30px rgba(0, 78, 124, 0.12);
+          box-shadow: 0 8px 30px rgba(0, 78, 124, 0.12);
+}
+.quote-section .quote-form-container .quote-form-card .form-heading {
+  font-family: var(--font-titles);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 2rem 0;
+  line-height: 1.2;
+}
+.quote-section .quote-form-container .quote-form .form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.quote-section .quote-form-container .quote-form .form-group input,
+.quote-section .quote-form-container .quote-form .form-group textarea {
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-primary);
+  border: 2px solid #E0E0E0;
+  border-radius: 6px;
+  background: var(--white);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  outline: none;
+}
+.quote-section .quote-form-container .quote-form .form-group input::-webkit-input-placeholder, .quote-section .quote-form-container .quote-form .form-group textarea::-webkit-input-placeholder {
+  color: #999;
+}
+.quote-section .quote-form-container .quote-form .form-group input::-moz-placeholder, .quote-section .quote-form-container .quote-form .form-group textarea::-moz-placeholder {
+  color: #999;
+}
+.quote-section .quote-form-container .quote-form .form-group input:-ms-input-placeholder, .quote-section .quote-form-container .quote-form .form-group textarea:-ms-input-placeholder {
+  color: #999;
+}
+.quote-section .quote-form-container .quote-form .form-group input::-ms-input-placeholder, .quote-section .quote-form-container .quote-form .form-group textarea::-ms-input-placeholder {
+  color: #999;
+}
+.quote-section .quote-form-container .quote-form .form-group input::placeholder,
+.quote-section .quote-form-container .quote-form .form-group textarea::placeholder {
+  color: #999;
+}
+.quote-section .quote-form-container .quote-form .form-group input:focus,
+.quote-section .quote-form-container .quote-form .form-group textarea:focus {
+  border-color: var(--primary-color);
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 78, 124, 0.1);
+          box-shadow: 0 0 0 3px rgba(0, 78, 124, 0.1);
+}
+.quote-section .quote-form-container .quote-form .form-group input.error,
+.quote-section .quote-form-container .quote-form .form-group textarea.error {
+  border-color: #d32f2f;
+}
+.quote-section .quote-form-container .quote-form .form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.quote-section .quote-form-container .quote-form .form-group .form-icon {
+  position: absolute;
+  right: 1.2rem;
+  top: 1.2rem;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+.quote-section .quote-form-container .quote-form .form-group .error-message {
+  display: none;
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-family: var(--font-body);
+}
+.quote-section .quote-form-container .quote-form .form-group.has-error input,
+.quote-section .quote-form-container .quote-form .form-group.has-error textarea {
+  border-color: #d32f2f;
+}
+.quote-section .quote-form-container .quote-form .form-group.has-error .error-message {
+  display: block;
+}
+.quote-section .quote-form-container .quote-form .btn-submit {
+  width: 100%;
+  background: var(--accent-color);
+  color: var(--white);
+  padding: 1.2rem 2rem;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.75rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+.quote-section .quote-form-container .quote-form .btn-submit:hover {
+  background: rgb(207.903930131, 98.4279475983, 22.096069869);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 8px 20px rgba(233, 124, 48, 0.4);
+          box-shadow: 0 8px 20px rgba(233, 124, 48, 0.4);
+}
+.quote-section .quote-form-container .quote-form .btn-submit:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.quote-section .quote-form-container .quote-form .btn-submit i {
+  font-size: 1.1rem;
+}
+.quote-section.animate .quote-steps {
+  -webkit-animation: fadeInLeft 0.8s ease-out 0.3s forwards;
+          animation: fadeInLeft 0.8s ease-out 0.3s forwards;
+}
+.quote-section.animate .quote-form-container {
+  -webkit-animation: fadeInRight 0.8s ease-out 0.5s forwards;
+          animation: fadeInRight 0.8s ease-out 0.5s forwards;
+}
+@media (max-width: 992px) {
+  .quote-section .quote-content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .quote-section .quote-steps .quote-title {
+    font-size: 2.5rem;
+  }
+  .quote-section .quote-form-container .quote-form-card .form-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .quote-section {
+    padding: 4rem 0;
+  }
+  .quote-section .quote-steps .quote-title {
+    font-size: 2rem;
+  }
+  .quote-section .quote-form-container .quote-form-card {
+    padding: 2rem;
+  }
+}
+
 /* Animation fade in from left */
 @-webkit-keyframes fadeInLeft {
   from {
