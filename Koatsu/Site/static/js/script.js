@@ -536,6 +536,315 @@ const ScrollToTop = {
 };
 
 // ============================================================
+// SERVICES PAGE ANIMATIONS MODULE
+// ============================================================
+const ServicesPageAnimations = {
+  config: {
+    observerOptions: {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    }
+  },
+
+  init() {
+    this.initScrollReveal();
+    this.initParallaxEffect();
+    this.initCardHoverEffects();
+    this.initCounterAnimations();
+    this.initTiltEffect();
+  },
+
+  /**
+   * Animation de révélation au scroll (Intersection Observer)
+   */
+  initScrollReveal() {
+    // Vérifier si IntersectionObserver est supporté
+    if (!('IntersectionObserver' in window)) {
+      console.warn('IntersectionObserver not supported');
+      // Afficher tous les éléments sans animation
+      document.querySelectorAll('.service-card, .feature-item, .category-item').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      });
+      return;
+    }
+
+    const observerCallback = (entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Ajouter un délai progressif pour effet cascade
+          setTimeout(() => {
+            entry.target.classList.add('animate-in');
+            console.log('✓ Element animated:', entry.target.className);
+          }, index * 100);
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, this.config.observerOptions);
+
+    // Observer les cartes de services
+    const serviceCards = document.querySelectorAll('.service-card');
+    console.log(`Found ${serviceCards.length} service cards`);
+    serviceCards.forEach(card => {
+      card.classList.add('will-animate');
+      observer.observe(card);
+    });
+
+    // Observer les feature items
+    const featureItems = document.querySelectorAll('.feature-item');
+    console.log(`Found ${featureItems.length} feature items`);
+    featureItems.forEach(item => {
+      item.classList.add('will-animate');
+      observer.observe(item);
+    });
+
+    // Observer les éléments de catégories
+    const categoryItems = document.querySelectorAll('.category-item');
+    console.log(`Found ${categoryItems.length} category items`);
+    categoryItems.forEach(item => {
+      item.classList.add('will-animate');
+      observer.observe(item);
+    });
+  },
+
+  /**
+   * Effet parallax sur le hero
+   */
+  initParallaxEffect() {
+    const heroPages = document.querySelector('.hero-pages');
+    if (!heroPages) {
+      console.log('No hero-pages found for parallax');
+      return;
+    }
+
+    console.log('✓ Parallax effect initialized');
+    
+    let ticking = false;
+
+    const updateParallax = () => {
+      const scrolled = window.pageYOffset;
+      const parallaxSpeed = 0.3;
+      
+      if (scrolled < 600) { // Limiter l'effet aux 600 premiers pixels
+        heroPages.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+      }
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    });
+  },
+
+  /**
+   * Effets interactifs sur les cartes au survol
+   */
+  initCardHoverEffects() {
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    serviceCards.forEach(card => {
+      // Effet de suivi de la souris
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / 20;
+        const rotateY = (centerX - x) / 20;
+        
+        card.style.transform = `
+          perspective(1000px) 
+          rotateX(${rotateX}deg) 
+          rotateY(${rotateY}deg) 
+          translateY(-15px) 
+          scale(1.02)
+        `;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+      });
+
+      // Animation des features au survol de la carte
+      const features = card.querySelectorAll('.service-features li');
+      card.addEventListener('mouseenter', () => {
+        features.forEach((feature, index) => {
+          setTimeout(() => {
+            feature.style.animation = 'slideInRight 0.4s ease forwards';
+          }, index * 80);
+        });
+      });
+    });
+  },
+
+  /**
+   * Animation de compteur pour les statistiques
+   */
+  initCounterAnimations() {
+    const counterElements = document.querySelectorAll('[data-counter]');
+    
+    counterElements.forEach(element => {
+      const target = parseInt(element.getAttribute('data-counter'));
+      const duration = 2000; // 2 secondes
+      const increment = target / (duration / 16); // 60fps
+      let current = 0;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const updateCounter = () => {
+              current += increment;
+              if (current < target) {
+                element.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+              } else {
+                element.textContent = target;
+              }
+            };
+            updateCounter();
+            observer.unobserve(element);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(element);
+    });
+  },
+
+  /**
+   * Effet d'inclinaison 3D sur les icônes
+   */
+  initTiltEffect() {
+    const icons = document.querySelectorAll('.service-icon, .feature-icon');
+
+    icons.forEach(icon => {
+      icon.addEventListener('mouseenter', function() {
+        this.style.transition = 'transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+      });
+
+      icon.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / 5;
+        const rotateY = (centerX - x) / 5;
+        
+        this.style.transform = `
+          perspective(500px) 
+          rotateX(${rotateX}deg) 
+          rotateY(${rotateY}deg) 
+          scale(1.1)
+        `;
+      });
+
+      icon.addEventListener('mouseleave', function() {
+        this.style.transform = 'perspective(500px) rotateX(0) rotateY(0) scale(1)';
+      });
+    });
+  }
+};
+
+// ============================================================
+// MAGNETIC BUTTON EFFECT (effet magnétique sur les boutons)
+// ============================================================
+const MagneticButtons = {
+  init() {
+    const buttons = document.querySelectorAll('.service-btn, .btn-primary, .btn-secondary');
+    
+    buttons.forEach(button => {
+      button.addEventListener('mousemove', (e) => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        button.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+      });
+
+      button.addEventListener('mouseleave', () => {
+        button.style.transform = 'translate(0, 0)';
+      });
+    });
+  }
+};
+
+// ============================================================
+// SMOOTH SCROLL POUR LES ANCRES
+// ============================================================
+const SmoothScroll = {
+  init() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        
+        // Ignorer les liens vides ou juste "#"
+        if (href === '#' || href === '') return;
+        
+        e.preventDefault();
+        
+        const target = document.querySelector(href);
+        if (target) {
+          const offsetTop = target.offsetTop - 100; // 100px pour le header
+          
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  }
+};
+
+// ============================================================
+// TYPING ANIMATION (animation de texte)
+// ============================================================
+const TypingAnimation = {
+  init() {
+    const elements = document.querySelectorAll('[data-typing]');
+    
+    elements.forEach(element => {
+      const text = element.textContent;
+      element.textContent = '';
+      element.style.opacity = '1';
+      
+      let index = 0;
+      const speed = 50; // vitesse de frappe en ms
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const typeChar = () => {
+              if (index < text.length) {
+                element.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeChar, speed);
+              }
+            };
+            typeChar();
+            observer.unobserve(element);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(element);
+    });
+  }
+};
+
+// ============================================================
 // EXPORT POUR UTILISATION GLOBALE (si nécessaire)
 // ============================================================
 window.KOATSU = {
@@ -545,5 +854,66 @@ window.KOATSU = {
   ScrollAnimations,
   QuoteForm,
   ScrollToTop,
+  ServicesPageAnimations,
+  MagneticButtons,
+  SmoothScroll,
+  TypingAnimation,
   Utils
 };
+
+// ============================================================
+// INITIALISATION AUTOMATIQUE
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialisation des modules de base (toutes les pages)
+  if (typeof Navigation !== 'undefined') Navigation.init();
+  if (typeof ScrollToTop !== 'undefined') ScrollToTop.init();
+  if (typeof SmoothScroll !== 'undefined') SmoothScroll.init();
+
+  // Initialisation spécifique à la page d'accueil
+  if (document.getElementById('splashScreen')) {
+    if (typeof SplashScreen !== 'undefined') SplashScreen.init();
+  }
+
+  if (document.querySelector('.services-carousel')) {
+    if (typeof ServicesCarousel !== 'undefined') ServicesCarousel.init();
+  }
+
+  if (document.querySelector('.quote-form')) {
+    if (typeof QuoteForm !== 'undefined') QuoteForm.init();
+  }
+
+  // Initialisation spécifique à la page services
+  const servicesGridSection = document.querySelector('.services-grid-section');
+  if (servicesGridSection) {
+    console.log('✓ Services page detected');
+    
+    if (typeof ServicesPageAnimations !== 'undefined') {
+      try {
+        ServicesPageAnimations.init();
+        console.log('✓ ServicesPageAnimations initialized');
+      } catch (error) {
+        console.error('Error initializing ServicesPageAnimations:', error);
+      }
+    }
+    
+    if (typeof MagneticButtons !== 'undefined') {
+      try {
+        MagneticButtons.init();
+        console.log('✓ MagneticButtons initialized');
+      } catch (error) {
+        console.error('Error initializing MagneticButtons:', error);
+      }
+    }
+  }
+
+  // Animations de typing si présentes
+  if (document.querySelector('[data-typing]')) {
+    if (typeof TypingAnimation !== 'undefined') TypingAnimation.init();
+  }
+
+  // Animations au scroll (toutes les pages)
+  if (typeof ScrollAnimations !== 'undefined') ScrollAnimations.init();
+
+  console.log('🚀 KOATSU - All modules initialized successfully');
+});
