@@ -1,0 +1,22 @@
+{% load static %}
+
+<!-- Hero Pages - Section réutilisable pour toutes les pages internes -->
+<section class="hero-pages" style="background-image: url('{% static 'img/background/background1.jpg' %}');" role="banner">
+    <div class="hero-pages-overlay"></div>
+    <div class="hero-pages-content">
+        <div class="container">
+            <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'site:home' %}" aria-label="Return to home page">
+                            <i class="fas fa-home" aria-hidden="true"></i> Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-separator" aria-hidden="true">|</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ page_title }}</li>
+                </ol>
+            </nav>
+            <h1 class="hero-pages-title">{{ page_title }}</h1>
+        </div>
+    </div>
+</section>

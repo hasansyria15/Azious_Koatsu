@@ -15,13 +15,13 @@
     <div class="main-navigation">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/">Accueil</a>
+          <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'site:home' %}">Accueil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/a-propos">À propos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/services">Nos Services</a>
+          <a class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}" href="{% url 'site:services' %}">Nos Services</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>

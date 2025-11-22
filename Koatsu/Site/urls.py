@@ -7,4 +7,6 @@ urlpatterns = [
     # Page d'accueil simple
     path('', views.index, name='home'),
     path('accueil/', views.index, name='home'),
+    # Page services
+    path('services/', views.services, name='services'),
 ]

@@ -1,0 +1,354 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services - KOATSU | Transport & Logistics Solutions{% endblock %}
+
+{% block meta_description %}Discover KOATSU's comprehensive transport and logistics services: Ground Transport, Air Freight, Maritime Shipping, and Warehousing. Professional, reliable, and efficient solutions for all your needs.{% endblock %}
+
+{% block meta_keywords %}ground transport, air freight, maritime shipping, warehousing, logistics services, freight forwarding, cargo transport, supply chain{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section - Services -->
+{% include 'partiels/hero_pages.html' with page_title='Services' %}
+
+<!-- Services Introduction -->
+<section class="services-intro">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-subtitle">Our Expertise</span>
+            <h2 class="section-title">Comprehensive Solutions for Your Business</h2>
+            <p class="section-description">
+                KOATSU combines Japanese precision with Swiss reliability to deliver world-class sourcing, logistics, and quality control services.
+                We are your trusted partner in global industrial supply chain management.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-grid-section">
+    <div class="container">
+        <div class="services-grid">
+            
+            <!-- Service 1 - Global Sourcing & Industrial Supply -->
+            <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card-image">
+                    <img src="{% static 'img/services/service1.png' %}" alt="Global Sourcing and Industrial Supply - Manufacturing partnerships" loading="lazy">
+                    <div class="service-card-overlay">
+                        <div class="service-icon">
+                            <i class="fas fa-industry" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Global Sourcing & Industrial Supply</h3>
+                    <p class="service-card-description">
+                        We collaborate with manufacturers in most industries and product categories, ensuring flexibility, reliability, and performance.
+                    </p>
+                    
+                    <h4 class="service-subtitle">Key Categories:</h4>
+                    <div class="service-categories">
+                        <div class="category-item">
+                            <i class="fas fa-flask" aria-hidden="true"></i>
+                            <strong>Polymers & Additives</strong>
+                            <p>SBS, SEBS, resins, synthetic rubbers, plasticizers</p>
+                        </div>
+                        <div class="category-item">
+                            <i class="fas fa-tint" aria-hidden="true"></i>
+                            <strong>Chemicals & Coatings</strong>
+                            <p>Solvents, pigments, process oils, curing agents</p>
+                        </div>
+                        <div class="category-item">
+                            <i class="fas fa-microchip" aria-hidden="true"></i>
+                            <strong>Electronic & Precision Components</strong>
+                            <p>PCB, connectors, harnesses, machined parts</p>
+                        </div>
+                        <div class="category-item">
+                            <i class="fas fa-box" aria-hidden="true"></i>
+                            <strong>Industrial Packaging</strong>
+                            <p>Films, cartons, cans, anti-static boxes, heat-sealable solutions</p>
+                        </div>
+                        <div class="category-item">
+                            <i class="fas fa-cog" aria-hidden="true"></i>
+                            <strong>Hardware & Mechanical Parts</strong>
+                            <p>Fasteners, locks, customized tooling</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="service-btn" aria-label="Request quote for global sourcing services">
+                        Get Started <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Service 2 - Supply Chain & Logistics -->
+            <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card-image">
+                    <img src="{% static 'img/services/service2.png' %}" alt="Supply Chain and Logistics - Freight and customs management" loading="lazy">
+                    <div class="service-card-overlay">
+                        <div class="service-icon">
+                            <i class="fas fa-shipping-fast" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Supply Chain & Logistics</h3>
+                    <p class="service-card-description">
+                        Flexible solutions for every project, every region. Complete end-to-end logistics management.
+                    </p>
+                    
+                    <ul class="service-features" role="list">
+                        <li>
+                            <i class="fas fa-ship" aria-hidden="true"></i>
+                            <div>
+                                <strong>Sea, Air & Road Freight</strong>
+                                <span>Multi-modal transportation solutions</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-boxes" aria-hidden="true"></i>
+                            <div>
+                                <strong>Multi-Supplier Consolidation</strong>
+                                <span>Optimize costs and reduce complexity</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-file-contract" aria-hidden="true"></i>
+                            <div>
+                                <strong>Documentation & Customs</strong>
+                                <span>LC, Bill of Lading, C/O management</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                            <div>
+                                <strong>Pre-Shipment Inspection</strong>
+                                <span>Quality checks & temporary storage</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                            <div>
+                                <strong>Traceability & Cost Optimization</strong>
+                                <span>Real-time tracking and efficiency</span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="service-btn" aria-label="Request quote for supply chain services">
+                        Get Started <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Service 3 - Quality Control & Audits -->
+            <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card-image">
+                    <img src="{% static 'img/services/service3.png' %}" alt="Quality Control and Audits - Japanese precision and Swiss standards" loading="lazy">
+                    <div class="service-card-overlay">
+                        <div class="service-icon">
+                            <i class="fas fa-certificate" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Quality Control & Audits</h3>
+                    <div class="service-badge">
+                        <span class="badge-flag">🇯🇵</span>
+                        <span class="badge-text">Japanese Standard</span>
+                        <span class="badge-separator">×</span>
+                        <span class="badge-flag">🇨🇭</span>
+                        <span class="badge-text">Swiss Precision</span>
+                    </div>
+                    <p class="service-card-description">
+                        Our priority: <strong>zero-defect performance</strong>. We ensure the highest standards of quality at every step.
+                    </p>
+                    
+                    <ul class="service-features" role="list">
+                        <li>
+                            <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                            <div>
+                                <strong>Supplier & Factory Audits</strong>
+                                <span>Quality, capacity, and ESG compliance</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-microscope" aria-hidden="true"></i>
+                            <div>
+                                <strong>First Article Inspection (FAI)</strong>
+                                <span>Validate initial production samples</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-eye" aria-hidden="true"></i>
+                            <div>
+                                <strong>On-Site Production Follow-Up</strong>
+                                <span>Continuous monitoring during manufacturing</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-award" aria-hidden="true"></i>
+                            <div>
+                                <strong>Certification Compliance</strong>
+                                <span>ISO, RoHS, REACH, and more</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                            <div>
+                                <strong>Continuous Improvement Reports</strong>
+                                <span>Data-driven quality enhancements</span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="service-btn" aria-label="Request quote for quality control services">
+                        Get Started <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Service 4 - Strategic Consulting -->
+            <article class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-card-image">
+                    <img src="{% static 'img/services/service4.png' %}" alt="Strategic Consulting - Business intelligence and optimization" loading="lazy">
+                    <div class="service-card-overlay">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card-content">
+                    <h3 class="service-card-title">Strategic Consulting</h3>
+                    <p class="service-card-description">
+                        Because every client deserves a <strong>custom-tailored approach</strong>. We help you optimize your sourcing strategy.
+                    </p>
+                    
+                    <ul class="service-features" role="list">
+                        <li>
+                            <i class="fas fa-handshake" aria-hidden="true"></i>
+                            <div>
+                                <strong>Supplier Scouting & Negotiation</strong>
+                                <span>Find the best partners and secure optimal terms</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+                            <div>
+                                <strong>Cost Optimization</strong>
+                                <span>Reduce expenses without compromising quality</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                            <div>
+                                <strong>Product Development Support</strong>
+                                <span>From concept to market-ready solutions</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <div>
+                                <strong>Market Intelligence</strong>
+                                <span>Industry insights and sourcing strategy</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            <div>
+                                <strong>Knowledge Transfer & Training</strong>
+                                <span>Cultural insights and best practices</span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="service-btn" aria-label="Request quote for strategic consulting services">
+                        Get Started <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-us">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-subtitle">Why KOATSU</span>
+            <h2 class="section-title">Your Trusted Partner in Global Trade</h2>
+            <p class="section-description">
+                Combining Japanese precision with Swiss reliability, we deliver excellence at every step.
+            </p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="100">
+                <div class="feature-icon">
+                    <i class="fas fa-globe-asia" aria-hidden="true"></i>
+                </div>
+                <h3 class="feature-title">Global Network</h3>
+                <p class="feature-description">Extensive partnerships across Asia, Europe, and beyond for seamless sourcing.</p>
+            </div>
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="feature-icon">
+                    <i class="fas fa-award" aria-hidden="true"></i>
+                </div>
+                <h3 class="feature-title">Zero-Defect Focus</h3>
+                <p class="feature-description">Japanese quality standards combined with Swiss precision for flawless results.</p>
+            </div>
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="feature-icon">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                </div>
+                <h3 class="feature-title">Expert Team</h3>
+                <p class="feature-description">Multilingual professionals with deep industry knowledge and cultural expertise.</p>
+            </div>
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="400">
+                <div class="feature-icon">
+                    <i class="fas fa-handshake" aria-hidden="true"></i>
+                </div>
+                <h3 class="feature-title">Custom Solutions</h3>
+                <p class="feature-description">Tailored approaches designed specifically for your unique business needs.</p>
+            </div>
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="500">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                </div>
+                <h3 class="feature-title">Cost Optimization</h3>
+                <p class="feature-description">Transparent pricing and efficiency improvements that reduce your bottom line.</p>
+            </div>
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="600">
+                <div class="feature-icon">
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                </div>
+                <h3 class="feature-title">Confidentiality</h3>
+                <p class="feature-description">Your business information and trade secrets are always protected.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="services-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Optimize Your Supply Chain?</h2>
+            <p class="cta-description">
+                Let's discuss how KOATSU can help you achieve your sourcing and logistics goals.
+                Contact us today for a free consultation tailored to your business needs.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary" aria-label="Request a free consultation">
+                    <i class="fas fa-comments" aria-hidden="true"></i> Request Consultation
+                </a>
+                <a href="mailto:contact@koatsu-global.com" class="btn btn-secondary" aria-label="Email us at contact@koatsu-global.com">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> Email Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

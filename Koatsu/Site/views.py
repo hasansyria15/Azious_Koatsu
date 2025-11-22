@@ -7,3 +7,12 @@ def index(request):
         'title': 'Accueil - KOATSU',
         'message': 'Bienvenue sur KOATSU!'
     })
+
+
+# Vue de la page services
+def services(request):
+    return render(request, 'services.html', {
+        'title': 'Services - KOATSU',
+        'page_title': 'Services',
+        'message': 'Nos services de transport et logistique'
+    })
