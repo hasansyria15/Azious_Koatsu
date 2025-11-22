@@ -16,3 +16,19 @@ def services(request):
         'page_title': 'Services',
         'message': 'Nos services de transport et logistique'
     })
+
+
+# Vue de la page about
+def about(request):
+    return render(request, 'about.html', {
+        'title': 'About Us - KOATSU Global',
+        'page_title': 'About Us'
+    })
+
+
+# Vue de la page contact
+def contact(request):
+    return render(request, 'contact.html', {
+        'title': 'Contact Us - KOATSU Global',
+        'page_title': 'Contact Us'
+    })

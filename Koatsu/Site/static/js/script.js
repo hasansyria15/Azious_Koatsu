@@ -595,5 +595,60 @@ document.addEventListener('DOMContentLoaded', () => {
     initServicesAnimations();
   }
 
+  // Animations de la page about
+  if (document.querySelector('.about-intro') || document.querySelector('.who-we-are')) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const aboutElements = document.querySelectorAll(
+      '.about-content, .about-image, .story-content, .story-highlight, .story-visual-card, ' +
+      '.philosophy-content, .commitment-card, .value-card, ' +
+      '.timeline-item, .region-card, .industry-item'
+    );
+
+    aboutElements.forEach(el => {
+      el.classList.add('will-animate');
+      observer.observe(el);
+    });
+
+    console.log(`✓ ${aboutElements.length} éléments About animés`);
+  }
+
+  // Animations de la page contact
+  if (document.querySelector('.contact-intro') || document.querySelector('.our-locations')) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const contactElements = document.querySelectorAll(
+      '.contact-intro, .location-card, .map-card, .why-koatsu-content, .contact-form-wrapper, ' +
+      '.contact-info-card, .tagline-box'
+    );
+
+    contactElements.forEach(el => {
+      el.classList.add('will-animate');
+      observer.observe(el);
+    });
+
+    console.log(`✓ ${contactElements.length} éléments Contact animés`);
+  }
+
   console.log('🚀 KOATSU initialisé');
 });

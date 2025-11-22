@@ -1,7 +1,15 @@
 {% load static %}
 
 <!-- Hero Pages - Section réutilisable pour toutes les pages internes -->
+{% if page_title == 'Services' %}
+<section class="hero-pages" style="background-image: url('{% static 'img/services/presenteServices.png' %}');" role="banner">
+{% elif page_title == 'About Us' %}
+<section class="hero-pages" style="background-image: url('{% static 'img/about/help.png' %}');" role="banner">
+{% elif page_title == 'Contact Us' %}
 <section class="hero-pages" style="background-image: url('{% static 'img/background/background1.jpg' %}');" role="banner">
+{% else %}
+<section class="hero-pages" style="background-image: url('{% static 'img/background/background1.jpg' %}');" role="banner">
+{% endif %}
     <div class="hero-pages-overlay"></div>
     <div class="hero-pages-content">
         <div class="container">
