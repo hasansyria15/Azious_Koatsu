@@ -5,6 +5,91 @@
  */
 
 // ============================================================
+// PAGE TRANSITION MODULE
+// ============================================================
+const PageTransition = {
+  overlay: null,
+  
+  init() {
+    this.overlay = document.getElementById('pageTransitionOverlay');
+    
+    if (!this.overlay) {
+      console.warn('Page transition overlay not found');
+      return;
+    }
+    
+    // Intercepter tous les clics sur les liens internes
+    this.attachLinkHandlers();
+    
+    // Cacher l'overlay au chargement initial
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        this.hideOverlay();
+      }, 100);
+    });
+  },
+  
+  attachLinkHandlers() {
+    // Sélectionner tous les liens internes (navigation)
+    const links = document.querySelectorAll('a[href^="/"], a[href^="' + window.location.origin + '"]');
+    
+    links.forEach(link => {
+      // Ne pas intercepter les liens avec target="_blank" ou qui ont des ancres
+      const href = link.getAttribute('href');
+      if (link.getAttribute('target') === '_blank' || 
+          (href && href.includes('#') && !href.startsWith('#'))) {
+        return;
+      }
+      
+      link.addEventListener('click', (e) => {
+        // Ne pas intercepter si c'est un lien vers la même page
+        const currentPath = window.location.pathname;
+        const linkPath = new URL(link.href, window.location.origin).pathname;
+        
+        if (currentPath === linkPath) {
+          return;
+        }
+        
+        e.preventDefault();
+        this.navigate(link.href);
+      });
+    });
+  },
+  
+  navigate(url) {
+    // Montrer l'overlay
+    this.showOverlay();
+    
+    // Ajouter la classe de transition au body
+    document.body.classList.add('transitioning');
+    
+    // Animer la page actuelle
+    const pageWrapper = document.querySelector('.page-wrapper');
+    if (pageWrapper) {
+      pageWrapper.classList.add('page-exit');
+    }
+    
+    // Attendre la fin de l'animation puis naviguer
+    setTimeout(() => {
+      window.location.href = url;
+    }, 400);
+  },
+  
+  showOverlay() {
+    if (this.overlay) {
+      this.overlay.classList.add('active');
+    }
+  },
+  
+  hideOverlay() {
+    if (this.overlay) {
+      this.overlay.classList.remove('active');
+      document.body.classList.remove('transitioning');
+    }
+  }
+};
+
+// ============================================================
 // SPLASH SCREEN MODULE
 // ============================================================
 const SplashScreen = {
@@ -520,6 +605,9 @@ window.KOATSU = {
 // INITIALISATION AUTOMATIQUE
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
+  // Page Transition (toutes les pages)
+  PageTransition.init();
+
   // Modules de base (toutes les pages)
   Navigation.init();
   ScrollToTop.init();
