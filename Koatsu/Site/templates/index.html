@@ -5,335 +5,326 @@
 
 <!-- Splash Screen -->
 <section id="splashScreen" class="splash-screen">
-  <div class="splash-content">
-    <!-- Logo et titre -->
-    <div class="splash-logo">
-      <img src="{% static 'img/logo.png' %}" alt="KOATSU Logo" class="splash-logo-img">
-      <div class="splash-title" role="heading" aria-level="1">
-        <span class="splash-text">KOA</span><span class="splash-text">TSU</span>
-      </div>
-      <p class="splash-tagline">Transport & Logistique</p>
-    </div>
+    <div class="splash-content">
+        <!-- Logo et titre -->
+        <div class="splash-logo">
+            <img src="{% static 'img/logo.png' %}" alt="KOATSU Logo" class="splash-logo-img">
+            <div class="splash-title" role="heading" aria-level="1">
+                <span class="splash-text">KOA</span><span class="splash-text">TSU</span>
+            </div>
+            <p class="splash-tagline">Transport & Logistique</p>
+        </div>
 
-    <!-- Animation de transport -->
-    <div class="transport-animation">
-      <div class="road">
-        <div class="road-line"></div>
-        <div class="road-line"></div>
-        <div class="road-line"></div>
-      </div>
-      <div class="vehicle">
-        <i class="fas fa-truck"></i>
-      </div>
-    </div>
+        <!-- Animation de transport -->
+        <div class="transport-animation">
+            <div class="road">
+                <div class="road-line"></div>
+                <div class="road-line"></div>
+                <div class="road-line"></div>
+            </div>
+            <div class="vehicle">
+                <i class="fas fa-truck"></i>
+            </div>
+        </div>
 
-    <!-- Texte de chargement -->
-    <div class="splash-loading">
-      <p class="loading-text">Chargement en cours...</p>
-      <div class="loading-dots">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
+        <!-- Texte de chargement -->
+        <div class="splash-loading">
+            <p class="loading-text">Chargement en cours...</p>
+            <div class="loading-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- Hero Section - Continental Transportation -->
-<section class="hero-section" style="background-image: url('{% static 'img/background/background1.jpg' %}');" role="banner">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="container">
-      <p class="hero-subtitle">Continental</p>
-      <h1 class="hero-title">Transportation</h1>
-      <p class="hero-description">
-        Transport or transportation is the movement of humans, animals<br>
-        and goods from one location to another.
-      </p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary">
-          <i class="fas fa-file-invoice"></i> Request Quote
-        </a>
-        <a href="#about" class="btn btn-secondary">
-          <i class="fas fa-arrow-right"></i> Learn More
-        </a>
-      </div>
+<section class="hero-section" style="background-image: url('{% static 'img/background/background1.jpg' %}');"
+    role="banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="container">
+            <p class="hero-subtitle">Continental</p>
+            <h1 class="hero-title">Transportation</h1>
+            <p class="hero-description">
+                Transport or transportation is the movement of humans, animals<br>
+                and goods from one location to another.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-file-invoice"></i> Request Quote
+                </a>
+                <a href="#about" class="btn btn-secondary">
+                    <i class="fas fa-arrow-right"></i> Learn More
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- Services Section -->
 <section class="services-section">
-  <div class="container">
-    <div class="services-content">
-      <!-- Carousel à gauche -->
-      <div class="services-carousel">
-        <div class="carousel-container">
-          <div class="carousel-track" id="servicesCarousel">
-            <!-- Slide 1 - Ground Transport -->
-            <div class="carousel-slide active">
-              <img src="{% static 'img/services/service1.png' %}" alt="Ground Transport">
-              <div class="slide-overlay">
-                <div class="slide-icon">
-                  <i class="fas fa-truck" aria-hidden="true"></i>
+    <div class="container">
+        <div class="services-content">
+            <!-- Carousel à gauche -->
+            <div class="services-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="servicesCarousel">
+                        <!-- Slide 1 - Ground Transport -->
+                        <div class="carousel-slide active">
+                            <img src="{% static 'img/services/service1.png' %}" alt="Ground Transport">
+                            <div class="slide-overlay">
+                                <div class="slide-icon">
+                                    <i class="fas fa-truck" aria-hidden="true"></i>
+                                </div>
+                                <p class="slide-title"><strong>Ground Transport</strong></p>
+                                <a href="#" class="slide-link" aria-label="Discover more about Ground Transport">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 - Ware Housing -->
+                        <div class="carousel-slide">
+                            <img src="{% static 'img/services/service2.png' %}" alt="Ware Housing">
+                            <div class="slide-overlay">
+                                <div class="slide-icon">
+                                    <i class="fas fa-warehouse" aria-hidden="true"></i>
+                                </div>
+                                <p class="slide-title"><strong>Ware Housing</strong></p>
+                                <a href="#" class="slide-link" aria-label="Discover more about Ware Housing">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 - Air Transport -->
+                        <div class="carousel-slide">
+                            <img src="{% static 'img/services/service3.png' %}" alt="Air Transport">
+                            <div class="slide-overlay">
+                                <div class="slide-icon">
+                                    <i class="fas fa-plane" aria-hidden="true"></i>
+                                </div>
+                                <p class="slide-title"><strong>Air Transport</strong></p>
+                                <a href="#" class="slide-link" aria-label="Discover more about Air Transport">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 - Maritime Transport -->
+                        <div class="carousel-slide">
+                            <img src="{% static 'img/services/service4.png' %}" alt="Maritime Transport">
+                            <div class="slide-overlay">
+                                <div class="slide-icon">
+                                    <i class="fas fa-ship" aria-hidden="true"></i>
+                                </div>
+                                <p class="slide-title"><strong>Maritime Transport</strong></p>
+                                <a href="#" class="slide-link" aria-label="Discover more about Maritime Transport">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation dots -->
+                    <div class="carousel-dots" role="tablist" aria-label="Services carousel navigation">
+                        <button class="dot active" data-slide="0" role="tab"
+                            aria-label="Go to slide 1 - Ground Transport" aria-selected="true"></button>
+                        <button class="dot" data-slide="1" role="tab" aria-label="Go to slide 2 - Ware Housing"
+                            aria-selected="false"></button>
+                        <button class="dot" data-slide="2" role="tab" aria-label="Go to slide 3 - Air Transport"
+                            aria-selected="false"></button>
+                        <button class="dot" data-slide="3" role="tab" aria-label="Go to slide 4 - Maritime Transport"
+                            aria-selected="false"></button>
+                    </div>
                 </div>
-                <p class="slide-title"><strong>Ground Transport</strong></p>
-                <a href="#" class="slide-link" aria-label="Discover more about Ground Transport">
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
-                </a>
-              </div>
             </div>
 
-            <!-- Slide 2 - Ware Housing -->
-            <div class="carousel-slide">
-              <img src="{% static 'img/services/service2.png' %}" alt="Ware Housing">
-              <div class="slide-overlay">
-                <div class="slide-icon">
-                  <i class="fas fa-warehouse" aria-hidden="true"></i>
-                </div>
-                <p class="slide-title"><strong>Ware Housing</strong></p>
-                <a href="#" class="slide-link" aria-label="Discover more about Ware Housing">
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
+            <!-- Texte à droite -->
+            <div class="services-text">
+                <p class="services-subtitle">Core Services</p>
+                <h2 class="services-title">Transport is defined As a movement</h2>
+                <p class="services-description">
+                    Transport or transportation is the movement of humans, animals and goods from one location to
+                    another. In other words, the action of transport is defined as a particular movement of an organism
+                    or thing from a point A to a Point B. Modes of transport include air, land (rail and road) water,
+                    cable, pipeline and space. The field can be divided into infrastructure, vehicles and operations.
+                    Transport enables trade between people, which is essential for the development of civilizations.
+                </p>
+                <a href="#services" class="btn btn-services">
+                    <i class="fas fa-briefcase"></i> More Services
                 </a>
-              </div>
             </div>
-
-            <!-- Slide 3 - Air Transport -->
-            <div class="carousel-slide">
-              <img src="{% static 'img/services/service3.png' %}" alt="Air Transport">
-              <div class="slide-overlay">
-                <div class="slide-icon">
-                  <i class="fas fa-plane" aria-hidden="true"></i>
-                </div>
-                <p class="slide-title"><strong>Air Transport</strong></p>
-                <a href="#" class="slide-link" aria-label="Discover more about Air Transport">
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
-                </a>
-              </div>
-            </div>
-
-            <!-- Slide 4 - Maritime Transport -->
-            <div class="carousel-slide">
-              <img src="{% static 'img/services/service4.png' %}" alt="Maritime Transport">
-              <div class="slide-overlay">
-                <div class="slide-icon">
-                  <i class="fas fa-ship" aria-hidden="true"></i>
-                </div>
-                <p class="slide-title"><strong>Maritime Transport</strong></p>
-                <a href="#" class="slide-link" aria-label="Discover more about Maritime Transport">
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Navigation dots -->
-          <div class="carousel-dots" role="tablist" aria-label="Services carousel navigation">
-            <button class="dot active" data-slide="0" role="tab" aria-label="Go to slide 1 - Ground Transport" aria-selected="true"></button>
-            <button class="dot" data-slide="1" role="tab" aria-label="Go to slide 2 - Ware Housing" aria-selected="false"></button>
-            <button class="dot" data-slide="2" role="tab" aria-label="Go to slide 3 - Air Transport" aria-selected="false"></button>
-            <button class="dot" data-slide="3" role="tab" aria-label="Go to slide 4 - Maritime Transport" aria-selected="false"></button>
-          </div>
         </div>
-      </div>
-
-      <!-- Texte à droite -->
-      <div class="services-text">
-        <p class="services-subtitle">Core Services</p>
-        <h2 class="services-title">Transport is defined As a movement</h2>
-        <p class="services-description">
-          Transport or transportation is the movement of humans, animals and goods from one location to another. In other words, the action of transport is defined as a particular movement of an organism or thing from a point A to a Point B. Modes of transport include air, land (rail and road) water, cable, pipeline and space. The field can be divided into infrastructure, vehicles and operations. Transport enables trade between people, which is essential for the development of civilizations.
-        </p>
-        <a href="#services" class="btn btn-services">
-          <i class="fas fa-briefcase"></i> More Services
-        </a>
-      </div>
     </div>
-  </div>
 </section>
 
 <!-- Quote Request Section -->
 <section class="quote-section">
-  <div class="container">
-    <div class="quote-content">
-      <!-- Étapes à gauche -->
-      <div class="quote-steps">
-        <p class="quote-subtitle">How It Works</p>
-        <h2 class="quote-title">Transport Fixed Consists Of Fixed.</h2>
+    <div class="container">
+        <div class="quote-content">
+            <!-- Étapes à gauche -->
+            <div class="quote-steps">
+                <p class="quote-subtitle">How It Works</p>
+                <h2 class="quote-title">Transport Fixed Consists Of Fixed.</h2>
 
-        <div class="steps-list">
-          <!-- Étape 1 -->
-          <div class="step-item">
-            <div class="step-number" aria-hidden="true">01</div>
-            <div class="step-info">
-              <h3 class="step-title">Entrer vos coordonnées</h3>
-              <p class="step-description">Fournissez-nous vos informations de contact afin que nous puissions vous joindre rapidement. Votre nom et votre adresse courriel sont essentiels pour traiter votre demande.</p>
-            </div>
-          </div>
+                <div class="steps-list">
+                    <!-- Étape 1 -->
+                    <div class="step-item">
+                        <div class="step-number" aria-hidden="true">01</div>
+                        <div class="step-info">
+                            <h3 class="step-title">Entrer vos coordonnées</h3>
+                            <p class="step-description">Fournissez-nous vos informations de contact afin que nous
+                                puissions vous joindre rapidement. Votre nom et votre adresse courriel sont essentiels
+                                pour traiter votre demande.</p>
+                        </div>
+                    </div>
 
-          <!-- Étape 2 -->
-          <div class="step-item">
-            <div class="step-number" aria-hidden="true">02</div>
-            <div class="step-info">
-              <h3 class="step-title">Entrer les détails de ce que vous voulez</h3>
-              <p class="step-description">Décrivez en détail vos besoins en matière de transport et logistique. Plus vous nous donnez d'informations, mieux nous pourrons répondre à vos attentes.</p>
-            </div>
-          </div>
+                    <!-- Étape 2 -->
+                    <div class="step-item">
+                        <div class="step-number" aria-hidden="true">02</div>
+                        <div class="step-info">
+                            <h3 class="step-title">Entrer les détails de ce que vous voulez</h3>
+                            <p class="step-description">Décrivez en détail vos besoins en matière de transport et
+                                logistique. Plus vous nous donnez d'informations, mieux nous pourrons répondre à vos
+                                attentes.</p>
+                        </div>
+                    </div>
 
-          <!-- Étape 3 -->
-          <div class="step-item">
-            <div class="step-number" aria-hidden="true">03</div>
-            <div class="step-info">
-              <h3 class="step-title">Nous allons vous contacter</h3>
-              <p class="step-description">Notre équipe d'experts prendra contact avec vous dans les plus brefs délais pour discuter de votre projet et vous proposer la meilleure solution de transport.</p>
+                    <!-- Étape 3 -->
+                    <div class="step-item">
+                        <div class="step-number" aria-hidden="true">03</div>
+                        <div class="step-info">
+                            <h3 class="step-title">Nous allons vous contacter</h3>
+                            <p class="step-description">Notre équipe d'experts prendra contact avec vous dans les plus
+                                brefs délais pour discuter de votre projet et vous proposer la meilleure solution de
+                                transport.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- Formulaire à droite -->
+            <div class="quote-form-container">
+                <div class="quote-form-card">
+                    <h3 class="form-heading">We Are here<br>Get A Free Quote</h3>
+
+                    <form id="quoteForm" class="quote-form">
+                        <!-- Champ Nom -->
+                        <div class="form-group">
+                            <label for="userName" class="visually-hidden">Your Name</label>
+                            <input type="text" id="userName" name="name" placeholder="Enter your name"
+                                aria-label="Enter your full name" aria-required="true" aria-describedby="userName-error"
+                                required>
+                            <i class="fas fa-user form-icon" aria-hidden="true"></i>
+                            <span class="error-message" id="userName-error" role="alert">The field is required.</span>
+                        </div>
+
+                        <!-- Champ Email -->
+                        <div class="form-group">
+                            <label for="userEmail" class="visually-hidden">Your Email</label>
+                            <input type="email" id="userEmail" name="email" placeholder="Enter your email"
+                                aria-label="Enter your email address" aria-required="true"
+                                aria-describedby="userEmail-error" required>
+                            <i class="fas fa-envelope form-icon" aria-hidden="true"></i>
+                            <span class="error-message" id="userEmail-error" role="alert">The field is required.</span>
+                        </div>
+
+                        <!-- Champ Détails -->
+                        <div class="form-group">
+                            <label for="userDetails" class="visually-hidden">Your Requirements</label>
+                            <textarea id="userDetails" name="details" rows="5"
+                                placeholder="Enter your details & requirements"
+                                aria-label="Enter your details and requirements" aria-required="true"
+                                aria-describedby="userDetails-error" required></textarea>
+                            <i class="fas fa-comment form-icon" aria-hidden="true"></i>
+                            <span class="error-message" id="userDetails-error" role="alert">The field is
+                                required.</span>
+                        </div>
+
+                        <!-- Bouton Submit -->
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i> Submit Now
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- Formulaire à droite -->
-      <div class="quote-form-container">
-        <div class="quote-form-card">
-          <h3 class="form-heading">We Are here<br>Get A Free Quote</h3>
-
-          <form id="quoteForm" class="quote-form">
-            <!-- Champ Nom -->
-            <div class="form-group">
-              <label for="userName" class="visually-hidden">Your Name</label>
-              <input 
-                type="text" 
-                id="userName" 
-                name="name" 
-                placeholder="Enter your name"
-                aria-label="Enter your full name"
-                aria-required="true"
-                aria-describedby="userName-error"
-                required
-              >
-              <i class="fas fa-user form-icon" aria-hidden="true"></i>
-              <span class="error-message" id="userName-error" role="alert">The field is required.</span>
-            </div>
-
-            <!-- Champ Email -->
-            <div class="form-group">
-              <label for="userEmail" class="visually-hidden">Your Email</label>
-              <input 
-                type="email" 
-                id="userEmail" 
-                name="email" 
-                placeholder="Enter your email"
-                aria-label="Enter your email address"
-                aria-required="true"
-                aria-describedby="userEmail-error"
-                required
-              >
-              <i class="fas fa-envelope form-icon" aria-hidden="true"></i>
-              <span class="error-message" id="userEmail-error" role="alert">The field is required.</span>
-            </div>
-
-            <!-- Champ Détails -->
-            <div class="form-group">
-              <label for="userDetails" class="visually-hidden">Your Requirements</label>
-              <textarea 
-                id="userDetails" 
-                name="details" 
-                rows="5"
-                placeholder="Enter your details & requirements"
-                aria-label="Enter your details and requirements"
-                aria-required="true"
-                aria-describedby="userDetails-error"
-                required
-              ></textarea>
-              <i class="fas fa-comment form-icon" aria-hidden="true"></i>
-              <span class="error-message" id="userDetails-error" role="alert">The field is required.</span>
-            </div>
-
-            <!-- Bouton Submit -->
-            <button type="submit" class="btn btn-submit">
-              <i class="fas fa-paper-plane"></i> Submit Now
-            </button>
-          </form>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <!-- Contact & Map Section -->
 <section class="contact-section">
-  <div class="container">
-    <div class="section-header text-center">
-      <h2 class="section-title">Our Place</h2>
-      <div class="title-underline" aria-hidden="true"></div>
-    </div>
-    <div class="contact-content">
-      <!-- Carte Google Maps -->
-      <div class="contact-map">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.876278810511!2d139.7069058035953!3d35.68004826501802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d9010ccb107%3A0x4feadfb2f347bbe2!2sTOKYO%20OFFICE!5e0!3m2!1sfr!2sca!4v1763647683533!5m2!1sfr!2sca"
-          width="100%" 
-          height="100%" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="KOATSU Tokyo Office Location - Google Maps"
-          aria-label="Interactive map showing KOATSU Tokyo office location in Harajuku, Shibuya-ku">
-        </iframe>
-      </div>
-
-      <!-- Informations de contact -->
-      <div class="contact-info">
-        <div class="contact-card">
-          <div class="contact-header">
-            <h3 class="contact-title">Office Address</h3>
-            <p class="contact-subtitle">KOATSU Global</p>
-          </div>
-
-          <div class="contact-details">
-            <!-- Email -->
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-text">
-                <span class="contact-label">Email</span>
-                <a href="mailto:info@koatsuglobal.com" class="contact-value">info@koatsuglobal.com</a>
-              </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div class="contact-text">
-                <span class="contact-label">Phone</span>
-                <a href="tel:+1234567890" class="contact-value">+1 (234) 567-890</a>
-              </div>
-            </div>
-
-            <!-- Address -->
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="contact-text">
-                <span class="contact-label">Tokyo Office</span>
-                <p class="contact-value">Harajuku, Shibuya-ku<br>Tokyo, Japan</p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Bouton d'action -->
-          <a href="https://www.google.com/maps/dir//TOKYO+OFFICE" target="_blank" class="btn btn-contact">
-            <i class="fas fa-location-arrow"></i> Get Direction
-          </a>
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Our Place</h2>
+            <div class="title-underline" aria-hidden="true"></div>
         </div>
-      </div>
+        <div class="contact-content">
+            <!-- Carte Google Maps -->
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.876278810511!2d139.7069058035953!3d35.68004826501802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d9010ccb107%3A0x4feadfb2f347bbe2!2sTOKYO%20OFFICE!5e0!3m2!1sfr!2sca!4v1763647683533!5m2!1sfr!2sca"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="KOATSU Tokyo Office Location - Google Maps"
+                    aria-label="Interactive map showing KOATSU Tokyo office location in Harajuku, Shibuya-ku">
+                </iframe>
+            </div>
+
+            <!-- Informations de contact -->
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <h3 class="contact-title">Office Address</h3>
+                        <p class="contact-subtitle">KOATSU Global</p>
+                    </div>
+
+                    <div class="contact-details">
+                        <!-- Email -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:info@koatsuglobal.com" class="contact-value">info@koatsuglobal.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+1234567890" class="contact-value">+1 (234) 567-890</a>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Tokyo Office</span>
+                                <p class="contact-value">Harajuku, Shibuya-ku<br>Tokyo, Japan</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Bouton d'action -->
+                    <a href="https://www.google.com/maps/dir//TOKYO+OFFICE" target="_blank" class="btn btn-contact">
+                        <i class="fas fa-location-arrow"></i> Get Direction
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 {% endblock %}

@@ -119,6 +119,9 @@ const SplashScreen = {
      * Affiche le splash screen
      */
     show() {
+        // Ajouter la classe splash-active au body pour cacher le header
+        document.body.classList.add('splash-active');
+
         // Empêcher le scroll pendant le splash screen
         document.body.style.overflow = 'hidden';
 
@@ -138,6 +141,9 @@ const SplashScreen = {
         setTimeout(() => {
             this.splashElement.style.display = 'none';
             document.body.style.overflow = 'auto';
+
+            // Retirer la classe splash-active pour afficher le header
+            document.body.classList.remove('splash-active');
 
             // Déclencher les animations du hero section
             this.triggerHeroAnimations();
