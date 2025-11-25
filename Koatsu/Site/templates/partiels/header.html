@@ -11,45 +11,42 @@
       </a>
     </div>
 
-    <!-- Navigation principale - Centrée -->
-    <div class="main-navigation">
+    <!-- Navigation principale - Centrée (Desktop) -->
+    <nav class="main-navigation">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'site:home' %}">Accueil</a>
+          <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+            href="{% url 'site:home' %}">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'site:about' %}">About</a>
+          <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+            href="{% url 'site:about' %}">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}" href="{% url 'site:services' %}">Services</a>
+          <a class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}"
+            href="{% url 'site:services' %}">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" href="{% url 'site:contact' %}">Contact</a>
+          <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
+            href="{% url 'site:contact' %}">Contact</a>
         </li>
       </ul>
+    </nav>
 
-      <!-- Mobile Navigation Toggle -->
-      <button class="mobile-nav-toggle" 
-              type="button" 
-              onclick="toggleMobileNav()" 
-              aria-label="Toggle mobile navigation menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu">
-        <i class="fas fa-bars" aria-hidden="true"></i>
-        <span class="sr-only">Menu</span>
-      </button>
-    </div>
+    <!-- Mobile Navigation Toggle (Hamburger Button) -->
+    <button class="mobile-nav-toggle" type="button" id="mobileMenuToggle" aria-label="Ouvrir le menu de navigation"
+      aria-expanded="false" aria-controls="mobileMenu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
 
     <!-- Sélecteur de langue - À droite -->
     <div class="language-selector">
       <div class="dropdown">
-        <button class="btn btn-language dropdown-toggle" 
-                type="button" 
-                id="languageDropdown"
-                aria-label="Select language"
-                aria-haspopup="true"
-                aria-expanded="false">
-          <i class="fas fa-globe" aria-hidden="true"></i> 
+        <button class="btn btn-language dropdown-toggle" type="button" id="languageDropdown"
+          aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-globe" aria-hidden="true"></i>
           <span>FR</span>
         </button>
         <ul class="dropdown-menu" id="languageMenu">
@@ -61,3 +58,82 @@
     </div>
   </div>
 </header>
+
+<!-- ============================================================
+     MENU MOBILE OVERLAY - Affiché uniquement sur téléphone
+============================================================ -->
+<section class="mobile-menu-overlay" id="mobileMenu" aria-hidden="true">
+  <!-- Fond overlay cliquable pour fermer -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
+  <!-- Contenu du menu mobile -->
+  <div class="mobile-menu-content">
+    <!-- Header du menu mobile avec logo et bouton fermer -->
+    <div class="mobile-menu-header">
+      <a class="mobile-menu-logo" href="/">
+        <img src="{% static 'img/logo.png' %}" alt="KOATSU Logo" />
+        <span>KOATSU</span>
+      </a>
+      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer le menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Navigation mobile -->
+    <nav class="mobile-menu-nav">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+            href="{% url 'site:home' %}">
+            <i class="fas fa-home"></i>
+            <span>Accueil</span>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+            href="{% url 'site:about' %}">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}"
+            href="{% url 'site:services' %}">
+            <i class="fas fa-cogs"></i>
+            <span>Services</span>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
+            href="{% url 'site:contact' %}">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sélecteur de langue mobile -->
+    <div class="mobile-language-selector">
+      <span class="mobile-language-title">
+        <i class="fas fa-globe"></i> Langue
+      </span>
+      <div class="mobile-language-options">
+        <a href="?lang=fr" class="mobile-lang-btn active">🇫🇷 FR</a>
+        <a href="?lang=en" class="mobile-lang-btn">🇺🇸 EN</a>
+        <a href="?lang=ja" class="mobile-lang-btn">🇯🇵 JP</a>
+      </div>
+    </div>
+
+    <!-- Footer du menu mobile -->
+    <div class="mobile-menu-footer">
+      <div class="mobile-social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="mobile-copyright">© 2025 KOATSU. Tous droits réservés.</p>
+    </div>
+  </div>
+</section>
