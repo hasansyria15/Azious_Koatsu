@@ -33,10 +33,10 @@
         <div class="footer-column footer-links">
           <h3 class="footer-title" data-i18n="footer.quicklinks">Quick Links</h3>
           <ul class="footer-list">
-            <li><a href="#home" data-i18n="nav.home">Home</a></li>
-            <li><a href="#about" data-i18n="nav.about">About</a></li>
-            <li><a href="#services" data-i18n="nav.services">Services</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            <li><a href="{% url 'site:home' %}" data-i18n="nav.home">Home</a></li>
+            <li><a href="{% url 'site:about' %}" data-i18n="nav.about">About</a></li>
+            <li><a href="{% url 'site:services' %}" data-i18n="nav.services">Services</a></li>
+            <li><a href="{% url 'site:contact' %}" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
 
@@ -44,10 +44,10 @@
         <div class="footer-column footer-services">
           <h3 class="footer-title" data-i18n="nav.services">Our Services</h3>
           <ul class="footer-list">
-            <li><a href="#maritime" data-i18n="services.maritime">Maritime Transport</a></li>
-            <li><a href="#air" data-i18n="services.air">Air Transport</a></li>
-            <li><a href="#road" data-i18n="services.ground">Ground Transport</a></li>
-            <li><a href="#warehousing" data-i18n="services.warehouse">Warehousing</a></li>
+            <li><a href="{% url 'site:services' %}#sourcing" data-i18n="services.sourcing.title">Global Sourcing & Industrial Supply</a></li>
+            <li><a href="{% url 'site:services' %}#logistics" data-i18n="services.logistics.title">Supply Chain & Logistics</a></li>
+            <li><a href="{% url 'site:services' %}#quality" data-i18n="services.quality.title">Quality Control & Audits</a></li>
+            <li><a href="{% url 'site:services' %}#consulting" data-i18n="services.consulting.title">Strategic Consulting</a></li>
           </ul>
         </div>
 

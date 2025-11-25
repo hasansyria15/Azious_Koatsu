@@ -1533,6 +1533,50 @@ body:not(.splash-active) footer {
   margin: 0 0 2rem 0;
   line-height: 1.2;
 }
+.quote-section .quote-form-container .quote-form-card .form-message {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  animation: slideInMessage 0.5s ease;
+}
+@keyframes slideInMessage {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.quote-section .quote-form-container .quote-form-card .form-message i {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.quote-section .quote-form-container .quote-form-card .form-message span {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.quote-section .quote-form-container .quote-form-card .form-message.success {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  border: 2px solid #28a745;
+  color: #155724;
+}
+.quote-section .quote-form-container .quote-form-card .form-message.success i {
+  color: #28a745;
+}
+.quote-section .quote-form-container .quote-form-card .form-message.error {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  border: 2px solid #dc3545;
+  color: #721c24;
+}
+.quote-section .quote-form-container .quote-form-card .form-message.error i {
+  color: #dc3545;
+}
 .quote-section .quote-form-container .quote-form .form-group {
   position: relative;
   margin-bottom: 1.5rem;
@@ -4114,6 +4158,61 @@ body:not(.splash-active) footer {
   margin-bottom: 2rem;
   font-weight: 700;
   text-align: center;
+}
+.why-koatsu .contact-form-wrapper .form-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  animation: slideIn 0.4s ease;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.why-koatsu .contact-form-wrapper .form-message .form-message-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+.why-koatsu .contact-form-wrapper .form-message .form-message-content h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.why-koatsu .contact-form-wrapper .form-message .form-message-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.why-koatsu .contact-form-wrapper .form-message.form-success {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.15) 100%);
+  border: 2px solid rgba(34, 197, 94, 0.4);
+}
+.why-koatsu .contact-form-wrapper .form-message.form-success .form-message-icon {
+  color: #22c55e;
+}
+.why-koatsu .contact-form-wrapper .form-message.form-success .form-message-content h4,
+.why-koatsu .contact-form-wrapper .form-message.form-success .form-message-content p {
+  color: var(--white);
+}
+.why-koatsu .contact-form-wrapper .form-message.form-error {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(220, 38, 38, 0.15) 100%);
+  border: 2px solid rgba(239, 68, 68, 0.4);
+}
+.why-koatsu .contact-form-wrapper .form-message.form-error .form-message-icon {
+  color: #ef4444;
+}
+.why-koatsu .contact-form-wrapper .form-message.form-error .form-message-content h4,
+.why-koatsu .contact-form-wrapper .form-message.form-error .form-message-content p {
+  color: var(--white);
 }
 .why-koatsu .contact-form-wrapper .contact-form .form-group {
   margin-bottom: 1.5rem;

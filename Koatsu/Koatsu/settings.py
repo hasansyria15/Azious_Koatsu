@@ -170,3 +170,21 @@ if not DEBUG:
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# ============================================================
+# CONFIGURATION EMAIL
+# ============================================================
+# Configuration SMTP pour Gmail avec backend personnalisé
+
+EMAIL_BACKEND = 'Koatsu.email_backend.CustomEmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'koatsuglobal@gmail.com'
+EMAIL_HOST_PASSWORD = 'gnqf ygth wolc zrgx'  # Mot de passe d'application Gmail
+EMAIL_TIMEOUT = 30
+
+# Email de destination pour les formulaires de contact
+CONTACT_EMAIL = 'hasansyria15@outlook.com'
+DEFAULT_FROM_EMAIL = 'koatsuglobal@gmail.com'

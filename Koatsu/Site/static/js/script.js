@@ -421,11 +421,10 @@ const QuoteForm = {
      */
     setupFormValidation() {
         this.form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            if (this.validateForm()) {
-                this.submitForm();
+            if (!this.validateForm()) {
+                e.preventDefault();
             }
+            // Si la validation passe, le formulaire sera soumis normalement au serveur
         });
 
         // Validation en temps réel

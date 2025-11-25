@@ -84,6 +84,7 @@ const I18n = {
             'quote.form.details': 'Enter your details & requirements',
             'quote.form.submit': 'Submit Now',
             'quote.form.error': 'This field is required.',
+            'quote.form.success': 'Thank you! Your request has been sent successfully. We will get back to you soon.',
 
             // ============ CONTACT SECTION ============
             'contact.title': 'Our Place',
@@ -344,6 +345,9 @@ const I18n = {
             'contact.form.message': 'Message',
             'contact.form.required': '*',
             'contact.form.submit': 'Send Message',
+            'contact.form.success.title': 'Message Sent Successfully!',
+            'contact.form.success.text': 'Thank you for contacting us. We have sent a confirmation to your email. Our team will get back to you within 1-2 business days.',
+            'contact.form.error.title': 'Error',
 
             // Contact Info
             'contact.info.subtitle': 'Contact Us',
@@ -415,6 +419,7 @@ const I18n = {
             'quote.form.details': 'ご要望の詳細を入力',
             'quote.form.submit': '送信する',
             'quote.form.error': 'この項目は必須です。',
+            'quote.form.success': 'ありがとうございます！ご依頼を正常に送信しました。近日中にご連絡いたします。',
 
             // ============ CONTACT SECTION ============
             'contact.title': '所在地',
@@ -675,6 +680,9 @@ const I18n = {
             'contact.form.message': 'メッセージ',
             'contact.form.required': '*',
             'contact.form.submit': 'メッセージを送信',
+            'contact.form.success.title': 'メッセージが正常に送信されました！',
+            'contact.form.success.text': 'お問い合わせいただきありがとうございます。確認メールをお送りしました。1〜2営業日以内にご連絡いたします。',
+            'contact.form.error.title': 'エラー',
 
             // Contact Info
             'contact.info.subtitle': 'お問い合わせ',
