@@ -216,17 +216,18 @@
                     <h3 class="form-heading" data-i18n="quote.form.heading">We Are here<br>Get A Free Quote</h3>
 
                     {% if form_submitted %}
-                        {% if form_success %}
-                        <div class="form-message success" id="quote-success">
-                            <i class="fas fa-check-circle"></i>
-                            <span data-i18n="quote.form.success">Thank you! Your request has been sent successfully. We will get back to you soon.</span>
-                        </div>
-                        {% elif form_error %}
-                        <div class="form-message error" id="quote-error">
-                            <i class="fas fa-exclamation-circle"></i>
-                            <span>{{ form_error }}</span>
-                        </div>
-                        {% endif %}
+                    {% if form_success %}
+                    <div class="form-message success" id="quote-success">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-i18n="quote.form.success">Thank you! Your request has been sent successfully. We will
+                            get back to you soon.</span>
+                    </div>
+                    {% elif form_error %}
+                    <div class="form-message error" id="quote-error">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>{{ form_error }}</span>
+                    </div>
+                    {% endif %}
                     {% endif %}
 
                     <form id="quoteForm" class="quote-form" method="POST" action="{% url 'site:home' %}#quote-section">

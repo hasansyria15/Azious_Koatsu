@@ -177,7 +177,7 @@ def index(request):
         try:
             # Email HTML stylisé pour Hasan
             email_subject = f'🔔 Nouvelle demande de devis KOATSU - {name}'
-            
+
             notification_html = f"""
 <!DOCTYPE html>
 <html lang="en">
@@ -190,7 +190,7 @@ def index(request):
         <tr>
             <td align="center">
                 <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                    
+
                     <!-- Header avec logo et gradient -->
                     <tr>
                         <td style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 40px 30px; text-align: center;">
@@ -198,12 +198,12 @@ def index(request):
                             <p style="color: #c9a227; margin: 10px 0 0 0; font-size: 14px; letter-spacing: 2px;">GLOBAL LIMITED</p>
                         </td>
                     </tr>
-                    
+
                     <!-- Bande dorée décorative -->
                     <tr>
                         <td style="background: linear-gradient(90deg, #c9a227, #d4af37, #c9a227); height: 4px;"></td>
                     </tr>
-                    
+
                     <!-- Alerte nouvelle demande de devis -->
                     <tr>
                         <td style="background-color: #fff3cd; padding: 20px 30px; border-left: 5px solid #c9a227;">
@@ -215,14 +215,14 @@ def index(request):
                             </p>
                         </td>
                     </tr>
-                    
+
                     <!-- Informations du client -->
                     <tr>
                         <td style="padding: 30px;">
                             <h3 style="color: #1a1a2e; margin: 0 0 20px 0; font-size: 18px; border-bottom: 2px solid #c9a227; padding-bottom: 10px;">
                                 👤 Informations du client
                             </h3>
-                            
+
                             <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 25px;">
                                 <tr>
                                     <td style="padding: 12px 0; border-bottom: 1px solid #eeeeee;">
@@ -237,12 +237,12 @@ def index(request):
                                     </td>
                                 </tr>
                             </table>
-                            
+
                             <!-- Détails et exigences -->
                             <h3 style="color: #1a1a2e; margin: 0 0 15px 0; font-size: 18px; border-bottom: 2px solid #c9a227; padding-bottom: 10px;">
                                 📋 Détails & Exigences
                             </h3>
-                            
+
                             <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #c9a227;">
                                 <tr>
                                     <td style="padding: 20px;">
@@ -250,7 +250,7 @@ def index(request):
                                     </td>
                                 </tr>
                             </table>
-                            
+
                             <!-- Bouton répondre -->
                             <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 30px;">
                                 <tr>
@@ -263,7 +263,7 @@ def index(request):
                             </table>
                         </td>
                     </tr>
-                    
+
                     <!-- Footer -->
                     <tr>
                         <td style="background-color: #1a1a2e; padding: 25px; text-align: center;">
@@ -275,7 +275,7 @@ def index(request):
                             </p>
                         </td>
                     </tr>
-                    
+
                 </table>
             </td>
         </tr>
@@ -283,7 +283,7 @@ def index(request):
 </body>
 </html>
 """
-            
+
             # Version texte de secours
             notification_text = f"""🔔 NOUVELLE DEMANDE DE DEVIS KOATSU
 
@@ -304,7 +304,7 @@ Pour répondre, envoyez un email à: {email}
 
             # Envoyer l'email HTML à Hasan
             from django.core.mail import EmailMultiAlternatives
-            
+
             email_message = EmailMultiAlternatives(
                 subject=email_subject,
                 body=notification_text,
