@@ -3,23 +3,28 @@
 
 {% block title %}Services - KOATSU | Transport & Logistics Solutions{% endblock %}
 
-{% block meta_description %}Discover KOATSU's comprehensive transport and logistics services: Ground Transport, Air Freight, Maritime Shipping, and Warehousing. Professional, reliable, and efficient solutions for all your needs.{% endblock %}
+{% block meta_description %}Discover KOATSU's comprehensive transport and logistics services: Ground Transport, Air
+Freight, Maritime Shipping, and Warehousing. Professional, reliable, and efficient solutions for all your needs.
+{% endblock %}
 
-{% block meta_keywords %}ground transport, air freight, maritime shipping, warehousing, logistics services, freight forwarding, cargo transport, supply chain{% endblock %}
+
+{% block meta_keywords %}ground transport, air freight, maritime shipping, warehousing, logistics services, freight
+forwarding, cargo transport, supply chain{% endblock %}
 
 {% block content %}
 
 <!-- Hero Section - Services -->
-{% include 'partiels/hero_pages.html' with page_title='Services' %}
+{% include 'partiels/hero_pages.html' with page_title='Services' page_title_key='services.hero.title' %}
 
 <!-- Services Introduction -->
 <section class="services-intro">
     <div class="container">
         <div class="section-header text-center">
-            <span class="section-subtitle">Our Expertise</span>
-            <h2 class="section-title">Comprehensive Solutions for Your Business</h2>
-            <p class="section-description">
-                KOATSU combines Japanese precision with Swiss reliability to deliver world-class sourcing, logistics, and quality control services.
+            <span class="section-subtitle" data-i18n="services.intro.subtitle">Our Expertise</span>
+            <h2 class="section-title" data-i18n="services.intro.title">Comprehensive Solutions for Your Business</h2>
+            <p class="section-description" data-i18n="services.intro.description">
+                KOATSU combines Japanese precision with Swiss reliability to deliver world-class sourcing, logistics,
+                and quality control services.
                 We are your trusted partner in global industrial supply chain management.
             </p>
         </div>
@@ -30,11 +35,12 @@
 <section class="services-grid-section">
     <div class="container">
         <div class="services-grid">
-            
+
             <!-- Service 1 - Global Sourcing & Industrial Supply -->
             <article class="service-card">
                 <div class="service-card-image">
-                    <img src="{% static 'img/services/service1.png' %}" alt="Global Sourcing and Industrial Supply - Manufacturing partnerships">
+                    <img src="{% static 'img/services/service1.png' %}"
+                        alt="Global Sourcing and Industrial Supply - Manufacturing partnerships">
                     <div class="service-card-overlay">
                         <div class="service-icon">
                             <i class="fas fa-industry" aria-hidden="true"></i>
@@ -42,51 +48,60 @@
                     </div>
                 </div>
                 <div class="service-card-content">
-                    <h3 class="service-card-title">Global Sourcing & Industrial Supply</h3>
-                    <p class="service-card-description">
-                        We collaborate with manufacturers in most industries and product categories, ensuring flexibility, reliability, and performance.
+                    <h3 class="service-card-title" data-i18n="services.sourcing.title">Global Sourcing & Industrial
+                        Supply</h3>
+                    <p class="service-card-description" data-i18n="services.sourcing.description">
+                        We collaborate with manufacturers in most industries and product categories, ensuring
+                        flexibility, reliability, and performance.
                     </p>
-                    
+
                     <ul class="service-features" role="list">
                         <li>
                             <i class="fas fa-flask" aria-hidden="true"></i>
                             <div>
-                                <strong>Polymers & Additives:</strong>
-                                <span>SBS, SEBS, resins, synthetic rubbers, plasticizers</span>
+                                <strong data-i18n="services.sourcing.polymers">Polymers & Additives:</strong>
+                                <span data-i18n="services.sourcing.polymers.desc">SBS, SEBS, resins, synthetic rubbers,
+                                    plasticizers</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-tint" aria-hidden="true"></i>
                             <div>
-                                <strong>Chemicals & Coatings:</strong>
-                                <span>Solvents, pigments, process oils, curing agents</span>
+                                <strong data-i18n="services.sourcing.chemicals">Chemicals & Coatings:</strong>
+                                <span data-i18n="services.sourcing.chemicals.desc">Solvents, pigments, process oils,
+                                    curing agents</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-microchip" aria-hidden="true"></i>
                             <div>
-                                <strong>Electronic & Precision Components:</strong>
-                                <span>PCB, connectors, harnesses, machined parts</span>
+                                <strong data-i18n="services.sourcing.electronic">Electronic & Precision
+                                    Components:</strong>
+                                <span data-i18n="services.sourcing.electronic.desc">PCB, connectors, harnesses, machined
+                                    parts</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-box" aria-hidden="true"></i>
                             <div>
-                                <strong>Industrial Packaging:</strong>
-                                <span>Films, cartons, cans, anti-static boxes, heat-sealable solutions</span>
+                                <strong data-i18n="services.sourcing.packaging">Industrial Packaging:</strong>
+                                <span data-i18n="services.sourcing.packaging.desc">Films, cartons, cans, anti-static
+                                    boxes, heat-sealable solutions</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-cog" aria-hidden="true"></i>
                             <div>
-                                <strong>Hardware & Mechanical Parts:</strong>
-                                <span>Fasteners, locks, customized tooling</span>
+                                <strong data-i18n="services.sourcing.hardware">Hardware & Mechanical Parts:</strong>
+                                <span data-i18n="services.sourcing.hardware.desc">Fasteners, locks, customized
+                                    tooling</span>
                             </div>
                         </li>
                     </ul>
-                    
+
                     <a href="#contact" class="service-btn" aria-label="Request quote for global sourcing services">
-                        Get Started <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        <span data-i18n="services.getstarted">Get Started</span> <i class="fas fa-arrow-right"
+                            aria-hidden="true"></i>
                     </a>
                 </div>
             </article>
@@ -94,7 +109,8 @@
             <!-- Service 2 - Supply Chain & Logistics -->
             <article class="service-card">
                 <div class="service-card-image">
-                    <img src="{% static 'img/services/service2.png' %}" alt="Supply Chain and Logistics - Freight and customs management">
+                    <img src="{% static 'img/services/service2.png' %}"
+                        alt="Supply Chain and Logistics - Freight and customs management">
                     <div class="service-card-overlay">
                         <div class="service-icon">
                             <i class="fas fa-shipping-fast" aria-hidden="true"></i>
@@ -102,51 +118,59 @@
                     </div>
                 </div>
                 <div class="service-card-content">
-                    <h3 class="service-card-title">Supply Chain & Logistics</h3>
-                    <p class="service-card-description">
+                    <h3 class="service-card-title" data-i18n="services.supplychain.title">Supply Chain & Logistics</h3>
+                    <p class="service-card-description" data-i18n="services.supplychain.description">
                         Flexible solutions for every project, every region. Complete end-to-end logistics management.
                     </p>
-                    
+
                     <ul class="service-features" role="list">
                         <li>
                             <i class="fas fa-ship" aria-hidden="true"></i>
                             <div>
-                                <strong>Sea, Air & Road Freight</strong>
-                                <span>Multi-modal transportation solutions</span>
+                                <strong data-i18n="services.supplychain.freight">Sea, Air & Road Freight</strong>
+                                <span data-i18n="services.supplychain.freight.desc">Multi-modal transportation
+                                    solutions</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-boxes" aria-hidden="true"></i>
                             <div>
-                                <strong>Multi-Supplier Consolidation</strong>
-                                <span>Optimize costs and reduce complexity</span>
+                                <strong data-i18n="services.supplychain.consolidation">Multi-Supplier
+                                    Consolidation</strong>
+                                <span data-i18n="services.supplychain.consolidation.desc">Optimize costs and reduce
+                                    complexity</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-file-contract" aria-hidden="true"></i>
                             <div>
-                                <strong>Documentation & Customs</strong>
-                                <span>LC, Bill of Lading, C/O management</span>
+                                <strong data-i18n="services.supplychain.documentation">Documentation & Customs</strong>
+                                <span data-i18n="services.supplychain.documentation.desc">LC, Bill of Lading, C/O
+                                    management</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-search" aria-hidden="true"></i>
                             <div>
-                                <strong>Pre-Shipment Inspection</strong>
-                                <span>Quality checks & temporary storage</span>
+                                <strong data-i18n="services.supplychain.inspection">Pre-Shipment Inspection</strong>
+                                <span data-i18n="services.supplychain.inspection.desc">Quality checks & temporary
+                                    storage</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-chart-line" aria-hidden="true"></i>
                             <div>
-                                <strong>Traceability & Cost Optimization</strong>
-                                <span>Real-time tracking and efficiency</span>
+                                <strong data-i18n="services.supplychain.traceability">Traceability & Cost
+                                    Optimization</strong>
+                                <span data-i18n="services.supplychain.traceability.desc">Real-time tracking and
+                                    efficiency</span>
                             </div>
                         </li>
                     </ul>
-                    
+
                     <a href="#contact" class="service-btn" aria-label="Request quote for supply chain services">
-                        Get Started <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        <span data-i18n="services.getstarted">Get Started</span> <i class="fas fa-arrow-right"
+                            aria-hidden="true"></i>
                     </a>
                 </div>
             </article>
@@ -154,7 +178,8 @@
             <!-- Service 3 - Quality Control & Audits -->
             <article class="service-card">
                 <div class="service-card-image">
-                    <img src="{% static 'img/services/service3.png' %}" alt="Quality Control and Audits - Japanese precision and Swiss standards">
+                    <img src="{% static 'img/services/service3.png' %}"
+                        alt="Quality Control and Audits - Japanese precision and Swiss standards">
                     <div class="service-card-overlay">
                         <div class="service-icon">
                             <i class="fas fa-certificate" aria-hidden="true"></i>
@@ -162,58 +187,63 @@
                     </div>
                 </div>
                 <div class="service-card-content">
-                    <h3 class="service-card-title">Quality Control & Audits</h3>
+                    <h3 class="service-card-title" data-i18n="services.quality.title">Quality Control & Audits</h3>
                     <div class="service-badge">
                         <span class="badge-flag">🇯🇵</span>
-                        <span class="badge-text">Japanese Standard</span>
+                        <span class="badge-text" data-i18n="services.quality.badge.jp">Japanese Standard</span>
                         <span class="badge-separator">×</span>
                         <span class="badge-flag">🇨🇭</span>
-                        <span class="badge-text">Swiss Precision</span>
+                        <span class="badge-text" data-i18n="services.quality.badge.ch">Swiss Precision</span>
                     </div>
-                    <p class="service-card-description">
-                        Our priority: <strong>zero-defect performance</strong>. We ensure the highest standards of quality at every step.
+                    <p class="service-card-description" data-i18n="services.quality.description">
+                        Our priority: <strong>zero-defect performance</strong>. We ensure the highest standards of
+                        quality at every step.
                     </p>
-                    
+
                     <ul class="service-features" role="list">
                         <li>
                             <i class="fas fa-clipboard-check" aria-hidden="true"></i>
                             <div>
-                                <strong>Supplier & Factory Audits</strong>
-                                <span>Quality, capacity, and ESG compliance</span>
+                                <strong data-i18n="services.quality.audits">Supplier & Factory Audits</strong>
+                                <span data-i18n="services.quality.audits.desc">Quality, capacity, and ESG
+                                    compliance</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-microscope" aria-hidden="true"></i>
                             <div>
-                                <strong>First Article Inspection (FAI)</strong>
-                                <span>Validate initial production samples</span>
+                                <strong data-i18n="services.quality.fai">First Article Inspection (FAI)</strong>
+                                <span data-i18n="services.quality.fai.desc">Validate initial production samples</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-eye" aria-hidden="true"></i>
                             <div>
-                                <strong>On-Site Production Follow-Up</strong>
-                                <span>Continuous monitoring during manufacturing</span>
+                                <strong data-i18n="services.quality.followup">On-Site Production Follow-Up</strong>
+                                <span data-i18n="services.quality.followup.desc">Continuous monitoring during
+                                    manufacturing</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-award" aria-hidden="true"></i>
                             <div>
-                                <strong>Certification Compliance</strong>
-                                <span>ISO, RoHS, REACH, and more</span>
+                                <strong data-i18n="services.quality.certification">Certification Compliance</strong>
+                                <span data-i18n="services.quality.certification.desc">ISO, RoHS, REACH, and more</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-chart-bar" aria-hidden="true"></i>
                             <div>
-                                <strong>Continuous Improvement Reports</strong>
-                                <span>Data-driven quality enhancements</span>
+                                <strong data-i18n="services.quality.improvement">Continuous Improvement Reports</strong>
+                                <span data-i18n="services.quality.improvement.desc">Data-driven quality
+                                    enhancements</span>
                             </div>
                         </li>
                     </ul>
-                    
+
                     <a href="#contact" class="service-btn" aria-label="Request quote for quality control services">
-                        Get Started <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        <span data-i18n="services.getstarted">Get Started</span> <i class="fas fa-arrow-right"
+                            aria-hidden="true"></i>
                     </a>
                 </div>
             </article>
@@ -221,7 +251,8 @@
             <!-- Service 4 - Strategic Consulting -->
             <article class="service-card">
                 <div class="service-card-image">
-                    <img src="{% static 'img/services/service4.png' %}" alt="Strategic Consulting - Business intelligence and optimization">
+                    <img src="{% static 'img/services/service4.png' %}"
+                        alt="Strategic Consulting - Business intelligence and optimization">
                     <div class="service-card-overlay">
                         <div class="service-icon">
                             <i class="fas fa-lightbulb" aria-hidden="true"></i>
@@ -229,51 +260,59 @@
                     </div>
                 </div>
                 <div class="service-card-content">
-                    <h3 class="service-card-title">Strategic Consulting</h3>
-                    <p class="service-card-description">
-                        Because every client deserves a <strong>custom-tailored approach</strong>. We help you optimize your sourcing strategy.
+                    <h3 class="service-card-title" data-i18n="services.consulting.title">Strategic Consulting</h3>
+                    <p class="service-card-description" data-i18n="services.consulting.description">
+                        Because every client deserves a <strong>custom-tailored approach</strong>. We help you optimize
+                        your sourcing strategy.
                     </p>
-                    
+
                     <ul class="service-features" role="list">
                         <li>
                             <i class="fas fa-handshake" aria-hidden="true"></i>
                             <div>
-                                <strong>Supplier Scouting & Negotiation</strong>
-                                <span>Find the best partners and secure optimal terms</span>
+                                <strong data-i18n="services.consulting.scouting">Supplier Scouting &
+                                    Negotiation</strong>
+                                <span data-i18n="services.consulting.scouting.desc">Find the best partners and secure
+                                    optimal terms</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-dollar-sign" aria-hidden="true"></i>
                             <div>
-                                <strong>Cost Optimization</strong>
-                                <span>Reduce expenses without compromising quality</span>
+                                <strong data-i18n="services.consulting.cost">Cost Optimization</strong>
+                                <span data-i18n="services.consulting.cost.desc">Reduce expenses without compromising
+                                    quality</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-lightbulb" aria-hidden="true"></i>
                             <div>
-                                <strong>Product Development Support</strong>
-                                <span>From concept to market-ready solutions</span>
+                                <strong data-i18n="services.consulting.development">Product Development Support</strong>
+                                <span data-i18n="services.consulting.development.desc">From concept to market-ready
+                                    solutions</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-globe" aria-hidden="true"></i>
                             <div>
-                                <strong>Market Intelligence</strong>
-                                <span>Industry insights and sourcing strategy</span>
+                                <strong data-i18n="services.consulting.market">Market Intelligence</strong>
+                                <span data-i18n="services.consulting.market.desc">Industry insights and sourcing
+                                    strategy</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                             <div>
-                                <strong>Knowledge Transfer & Training</strong>
-                                <span>Cultural insights and best practices</span>
+                                <strong data-i18n="services.consulting.training">Knowledge Transfer & Training</strong>
+                                <span data-i18n="services.consulting.training.desc">Cultural insights and best
+                                    practices</span>
                             </div>
                         </li>
                     </ul>
-                    
+
                     <a href="#contact" class="service-btn" aria-label="Request quote for strategic consulting services">
-                        Get Started <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        <span data-i18n="services.getstarted">Get Started</span> <i class="fas fa-arrow-right"
+                            aria-hidden="true"></i>
                     </a>
                 </div>
             </article>
@@ -286,9 +325,9 @@
 <section class="why-choose-us">
     <div class="container">
         <div class="section-header text-center">
-            <span class="section-subtitle">Why KOATSU</span>
-            <h2 class="section-title">Your Trusted Partner in Global Trade</h2>
-            <p class="section-description">
+            <span class="section-subtitle" data-i18n="services.why.subtitle">Why KOATSU</span>
+            <h2 class="section-title" data-i18n="services.why.title">Your Trusted Partner in Global Trade</h2>
+            <p class="section-description" data-i18n="services.why.description">
                 Combining Japanese precision with Swiss reliability, we deliver excellence at every step.
             </p>
         </div>
@@ -297,57 +336,65 @@
                 <div class="feature-icon">
                     <i class="fas fa-globe-asia" aria-hidden="true"></i>
                 </div>
-                <h3 class="feature-title">Global Network</h3>
-                <p class="feature-description">Extensive partnerships across Asia, Europe, and beyond for seamless sourcing.</p>
+                <h3 class="feature-title" data-i18n="services.why.network.title">Global Network</h3>
+                <p class="feature-description" data-i18n="services.why.network.desc">Extensive partnerships across Asia,
+                    Europe, and beyond for seamless sourcing.</p>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">
                     <i class="fas fa-award" aria-hidden="true"></i>
                 </div>
-                <h3 class="feature-title">Zero-Defect Focus</h3>
-                <p class="feature-description">Japanese quality standards combined with Swiss precision for flawless results.</p>
+                <h3 class="feature-title" data-i18n="services.why.zerodefect.title">Zero-Defect Focus</h3>
+                <p class="feature-description" data-i18n="services.why.zerodefect.desc">Japanese quality standards
+                    combined with Swiss precision for flawless results.</p>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">
                     <i class="fas fa-users" aria-hidden="true"></i>
                 </div>
-                <h3 class="feature-title">Expert Team</h3>
-                <p class="feature-description">Multilingual professionals with deep industry knowledge and cultural expertise.</p>
+                <h3 class="feature-title" data-i18n="services.why.team.title">Expert Team</h3>
+                <p class="feature-description" data-i18n="services.why.team.desc">Multilingual professionals with deep
+                    industry knowledge and cultural expertise.</p>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">
                     <i class="fas fa-handshake" aria-hidden="true"></i>
                 </div>
-                <h3 class="feature-title">Custom Solutions</h3>
-                <p class="feature-description">Tailored approaches designed specifically for your unique business needs.</p>
+                <h3 class="feature-title" data-i18n="services.why.custom.title">Custom Solutions</h3>
+                <p class="feature-description" data-i18n="services.why.custom.desc">Tailored approaches designed
+                    specifically for your unique business needs.</p>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">
                     <i class="fas fa-chart-line" aria-hidden="true"></i>
                 </div>
-                <h3 class="feature-title">Cost Optimization</h3>
-                <p class="feature-description">Transparent pricing and efficiency improvements that reduce your bottom line.</p>
+                <h3 class="feature-title" data-i18n="services.why.cost.title">Cost Optimization</h3>
+                <p class="feature-description" data-i18n="services.why.cost.desc">Transparent pricing and efficiency
+                    improvements that reduce your bottom line.</p>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">
                     <i class="fas fa-lock" aria-hidden="true"></i>
                 </div>
-                <h3 class="feature-title">Confidentiality</h3>
-                <p class="feature-description">Your business information and trade secrets are always protected.</p>
+                <h3 class="feature-title" data-i18n="services.why.confidentiality.title">Confidentiality</h3>
+                <p class="feature-description" data-i18n="services.why.confidentiality.desc">Your business information
+                    and trade secrets are always protected.</p>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">
                     <i class="fas fa-shield-alt" aria-hidden="true"></i>
                 </div>
-                <h3 class="feature-title">Risk Management</h3>
-                <p class="feature-description">Comprehensive supplier vetting and continuous monitoring to minimize supply chain risks.</p>
+                <h3 class="feature-title" data-i18n="services.why.risk.title">Risk Management</h3>
+                <p class="feature-description" data-i18n="services.why.risk.desc">Comprehensive supplier vetting and
+                    continuous monitoring to minimize supply chain risks.</p>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">
                     <i class="fas fa-clock" aria-hidden="true"></i>
                 </div>
-                <h3 class="feature-title">24/7 Support</h3>
-                <p class="feature-description">Round-the-clock assistance across time zones to keep your operations running smoothly.</p>
+                <h3 class="feature-title" data-i18n="services.why.support.title">24/7 Support</h3>
+                <p class="feature-description" data-i18n="services.why.support.desc">Round-the-clock assistance across
+                    time zones to keep your operations running smoothly.</p>
             </div>
         </div>
     </div>
@@ -357,17 +404,21 @@
 <section class="services-cta">
     <div class="container">
         <div class="cta-content">
-            <h2 class="cta-title">Ready to Optimize Your Supply Chain?</h2>
-            <p class="cta-description">
+            <h2 class="cta-title" data-i18n="services.cta.title">Ready to Optimize Your Supply Chain?</h2>
+            <p class="cta-description" data-i18n="services.cta.description">
                 Let's discuss how KOATSU can help you achieve your sourcing and logistics goals.
                 Contact us today for a free consultation tailored to your business needs.
             </p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary" aria-label="Request a free consultation">
-                    <i class="fas fa-comments" aria-hidden="true"></i> Request Consultation
+                <a href="{% url 'site:contact' %}#contact-form" class="btn btn-primary"
+                    aria-label="Request a free consultation">
+                    <i class="fas fa-comments" aria-hidden="true"></i> <span
+                        data-i18n="services.cta.consultation">Request Consultation</span>
                 </a>
-                <a href="mailto:contact@koatsu-global.com" class="btn btn-secondary" aria-label="Email us at contact@koatsu-global.com">
-                    <i class="fas fa-envelope" aria-hidden="true"></i> Email Us
+                <a href="mailto:contact@koatsu-global.com" class="btn btn-secondary"
+                    aria-label="Email us at contact@koatsu-global.com">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> <span data-i18n="services.cta.email">Email
+                        Us</span>
                 </a>
             </div>
         </div>

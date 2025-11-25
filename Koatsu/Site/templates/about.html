@@ -3,14 +3,16 @@
 
 {% block title %}About Us{% endblock %}
 
-{% block meta_description %}Discover KOATSU Global Limited - Founded in 2021, bridging Japan's precision, Swiss rigor, and Asia's efficiency. Reliable sourcing, premium quality, and seamless logistics solutions worldwide.{% endblock %}
+{% block meta_description %}Discover KOATSU Global Limited - Founded in 2021, bridging Japan's precision, Swiss rigor,
+and Asia's efficiency. Reliable sourcing, premium quality, and seamless logistics solutions worldwide.{% endblock %}
 
-{% block meta_keywords %}KOATSU Global, industrial sourcing, Japanese precision, Swiss reliability, logistics solutions, global procurement, supply chain management, Asia sourcing, European manufacturing{% endblock %}
+{% block meta_keywords %}KOATSU Global, industrial sourcing, Japanese precision, Swiss reliability, logistics solutions,
+global procurement, supply chain management, Asia sourcing, European manufacturing{% endblock %}
 
 {% block content %}
 
 <!-- Hero Section - About -->
-{% include 'partiels/hero_pages.html' with page_title='About Us' %}
+{% include 'partiels/hero_pages.html' with page_title='About Us' page_title_key='about.hero.title' %}
 
 <!-- Company Introduction -->
 <section class="about-intro">
@@ -18,33 +20,36 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-content">
-                    <span class="section-subtitle">KOATSU Global Limited</span>
-                    <h2 class="section-title">Bridging Japan's Precision, Swiss Rigor & Asia's Efficiency</h2>
-                    <p class="lead-text">
-                        Delivering reliable sourcing, premium quality, and seamless logistics solutions across Asia, Europe, and America.
+                    <span class="section-subtitle" data-i18n="about.intro.subtitle">KOATSU Global Limited</span>
+                    <h2 class="section-title" data-i18n="about.intro.title">Bridging Japan's Precision, Swiss Rigor &
+                        Asia's Efficiency</h2>
+                    <p class="lead-text" data-i18n="about.intro.lead">
+                        Delivering reliable sourcing, premium quality, and seamless logistics solutions across Asia,
+                        Europe, and America.
                     </p>
                     <div class="company-stats">
                         <div class="stat-item">
                             <div class="stat-number">2021</div>
-                            <div class="stat-label">Founded</div>
+                            <div class="stat-label" data-i18n="about.stats.founded">Founded</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">3</div>
-                            <div class="stat-label">Continents</div>
+                            <div class="stat-label" data-i18n="about.stats.continents">Continents</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">100+</div>
-                            <div class="stat-label">Partners</div>
+                            <div class="stat-label" data-i18n="about.stats.partners">Partners</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="about-image">
-                    <img src="{% static 'img/about/team.png' %}" alt="KOATSU Global - International sourcing and logistics" class="img-fluid">
+                    <img src="{% static 'img/about/team.png' %}"
+                        alt="KOATSU Global - International sourcing and logistics" class="img-fluid">
                     <div class="image-badge">
                         <i class="fas fa-globe" aria-hidden="true"></i>
-                        <span>Global Network</span>
+                        <span data-i18n="about.image.badge">Global Network</span>
                     </div>
                 </div>
             </div>
@@ -56,8 +61,8 @@
 <section class="who-we-are">
     <div class="container">
         <div class="section-header text-center">
-            <span class="section-subtitle">Our Story</span>
-            <h2 class="section-title">Who We Are</h2>
+            <span class="section-subtitle" data-i18n="about.whoweare.subtitle">Our Story</span>
+            <h2 class="section-title" data-i18n="about.whoweare.title">Who We Are</h2>
         </div>
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -67,44 +72,53 @@
                             <i class="fas fa-globe-asia"></i>
                         </div>
                         <div class="highlight-text">
-                            <h3>Global Connectivity</h3>
-                            <p>Founded in <strong>2021</strong>, <strong>Koatsu Global Limited</strong> connects companies around the world with the most reliable manufacturers across Asia, Europe, and America.</p>
+                            <h3 data-i18n="about.whoweare.connectivity.title">Global Connectivity</h3>
+                            <p data-i18n="about.whoweare.connectivity.text">Founded in <strong>2021</strong>,
+                                <strong>Koatsu Global Limited</strong> connects companies around the world with the most
+                                reliable manufacturers across Asia, Europe, and America.
+                            </p>
                         </div>
                     </div>
-                    
+
                     <div class="story-highlight">
                         <div class="highlight-icon">
                             <i class="fas fa-award"></i>
                         </div>
                         <div class="highlight-text">
-                            <h3>Excellence Standard</h3>
-                            <p>We deliver premium industrial sourcing, strategic consulting, and logistics solutions — all executed with <strong>Japanese discipline</strong>, <strong>Swiss precision</strong>, and <strong>global flexibility</strong>.</p>
+                            <h3 data-i18n="about.whoweare.excellence.title">Excellence Standard</h3>
+                            <p data-i18n="about.whoweare.excellence.text">We deliver premium industrial sourcing,
+                                strategic consulting, and logistics solutions — all executed with <strong>Japanese
+                                    discipline</strong>, <strong>Swiss precision</strong>, and <strong>global
+                                    flexibility</strong>.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-6">
                 <div class="story-content-right">
                     <div class="story-visual-card">
                         <div class="story-image-wrapper">
-                            <img src="{% static 'img/about/meeting.png' %}" alt="KOATSU Global team meeting - Collaboration and strategy" class="story-image">
+                            <img src="{% static 'img/about/meeting.png' %}"
+                                alt="KOATSU Global team meeting - Collaboration and strategy" class="story-image">
                         </div>
-                        <h3>End-to-End Solutions</h3>
-                        <p>From polymers to precision components, from packaging to engineering, we provide comprehensive procurement and supply chain services designed for performance and trust.</p>
-                        
+                        <h3 data-i18n="about.whoweare.solutions.title">End-to-End Solutions</h3>
+                        <p data-i18n="about.whoweare.solutions.text">From polymers to precision components, from
+                            packaging to engineering, we provide comprehensive procurement and supply chain services
+                            designed for performance and trust.</p>
+
                         <div class="story-features">
                             <div class="feature-badge">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Quality Assurance</span>
+                                <span data-i18n="about.whoweare.quality">Quality Assurance</span>
                             </div>
                             <div class="feature-badge">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Global Network</span>
+                                <span data-i18n="about.whoweare.network">Global Network</span>
                             </div>
                             <div class="feature-badge">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Expert Consulting</span>
+                                <span data-i18n="about.whoweare.consulting">Expert Consulting</span>
                             </div>
                         </div>
                     </div>
@@ -121,18 +135,21 @@
             <div class="col-lg-6">
                 <div class="philosophy-content">
                     <div class="section-header">
-                        <span class="section-subtitle"><i class="fas fa-bullseye"></i> Our Philosophy</span>
-                        <h2 class="section-title">Discipline. Integrity. Flexibility. Excellence.</h2>
+                        <span class="section-subtitle"><i class="fas fa-bullseye"></i> <span
+                                data-i18n="about.philosophy.subtitle">Our Philosophy</span></span>
+                        <h2 class="section-title" data-i18n="about.philosophy.title">Discipline. Integrity. Flexibility.
+                            Excellence.</h2>
                     </div>
                     <div class="philosophy-text">
-                        <p class="lead-text">
+                        <p class="lead-text" data-i18n="about.philosophy.lead">
                             We adapt to your industry, your timelines, and your standards — without compromise.
                         </p>
-                        <p class="philosophy-description">
+                        <p class="philosophy-description" data-i18n="about.philosophy.desc">
                             Our partnerships are built on trust, transparency, and performance.
                         </p>
                         <p class="philosophy-tagline">
-                            <strong>Global reach. Local expertise. Lasting results.</strong>
+                            <strong data-i18n="about.philosophy.tagline">Global reach. Local expertise. Lasting
+                                results.</strong>
                         </p>
                     </div>
                 </div>
@@ -143,28 +160,29 @@
                         <span class="commitment-icon">
                             <i class="fas fa-handshake"></i>
                         </span>
-                        <h3>Our Commitment</h3>
+                        <h3 data-i18n="about.commitment.title">Our Commitment</h3>
                     </div>
                     <ul class="commitment-list">
                         <li class="commitment-item">
                             <i class="fas fa-check-circle" aria-hidden="true"></i>
-                            <span>Streamlined procurement strategies</span>
+                            <span data-i18n="about.commitment.1">Streamlined procurement strategies</span>
                         </li>
                         <li class="commitment-item">
                             <i class="fas fa-check-circle" aria-hidden="true"></i>
-                            <span>Reliable supplier networks</span>
+                            <span data-i18n="about.commitment.2">Reliable supplier networks</span>
                         </li>
                         <li class="commitment-item">
                             <i class="fas fa-check-circle" aria-hidden="true"></i>
-                            <span>Measurable cost savings</span>
+                            <span data-i18n="about.commitment.3">Measurable cost savings</span>
                         </li>
                         <li class="commitment-item">
                             <i class="fas fa-check-circle" aria-hidden="true"></i>
-                            <span>Premium quality assurance</span>
+                            <span data-i18n="about.commitment.4">Premium quality assurance</span>
                         </li>
                     </ul>
                     <div class="commitment-footer">
-                        <p><strong>Koatsu Global Limited</strong> — where precision meets performance.</p>
+                        <p data-i18n="about.commitment.footer"><strong>Koatsu Global Limited</strong> — where precision
+                            meets performance.</p>
                     </div>
                 </div>
             </div>
@@ -176,9 +194,9 @@
 <section class="our-values">
     <div class="container">
         <div class="section-header text-center">
-            <span class="section-subtitle">What Drives Us</span>
-            <h2 class="section-title">Our Core Values</h2>
-            <p class="section-description">
+            <span class="section-subtitle" data-i18n="about.values.subtitle">What Drives Us</span>
+            <h2 class="section-title" data-i18n="about.values.title">Our Core Values</h2>
+            <p class="section-description" data-i18n="about.values.description">
                 The principles that guide every partnership, every project, and every delivery.
             </p>
         </div>
@@ -187,8 +205,8 @@
                 <div class="value-icon">
                     <i class="fas fa-crosshairs" aria-hidden="true"></i>
                 </div>
-                <h3 class="value-title">Precision</h3>
-                <p class="value-description">
+                <h3 class="value-title" data-i18n="about.values.precision.title">Precision</h3>
+                <p class="value-description" data-i18n="about.values.precision.desc">
                     Japanese-inspired attention to detail in every aspect of our operations, from sourcing to delivery.
                 </p>
             </article>
@@ -196,8 +214,8 @@
                 <div class="value-icon">
                     <i class="fas fa-shield-alt" aria-hidden="true"></i>
                 </div>
-                <h3 class="value-title">Reliability</h3>
-                <p class="value-description">
+                <h3 class="value-title" data-i18n="about.values.reliability.title">Reliability</h3>
+                <p class="value-description" data-i18n="about.values.reliability.desc">
                     Swiss-level rigor in quality control and compliance, ensuring zero-defect outcomes.
                 </p>
             </article>
@@ -205,8 +223,8 @@
                 <div class="value-icon">
                     <i class="fas fa-rocket" aria-hidden="true"></i>
                 </div>
-                <h3 class="value-title">Efficiency</h3>
-                <p class="value-description">
+                <h3 class="value-title" data-i18n="about.values.efficiency.title">Efficiency</h3>
+                <p class="value-description" data-i18n="about.values.efficiency.desc">
                     Asian market agility combined with streamlined processes for rapid, cost-effective solutions.
                 </p>
             </article>
@@ -214,8 +232,8 @@
                 <div class="value-icon">
                     <i class="fas fa-handshake" aria-hidden="true"></i>
                 </div>
-                <h3 class="value-title">Partnership</h3>
-                <p class="value-description">
+                <h3 class="value-title" data-i18n="about.values.partnership.title">Partnership</h3>
+                <p class="value-description" data-i18n="about.values.partnership.desc">
                     Building long-term relationships based on transparency, trust, and mutual success.
                 </p>
             </article>
@@ -223,8 +241,8 @@
                 <div class="value-icon">
                     <i class="fas fa-lightbulb" aria-hidden="true"></i>
                 </div>
-                <h3 class="value-title">Innovation</h3>
-                <p class="value-description">
+                <h3 class="value-title" data-i18n="about.values.innovation.title">Innovation</h3>
+                <p class="value-description" data-i18n="about.values.innovation.desc">
                     Continuously improving our methods and adopting new technologies for better results.
                 </p>
             </article>
@@ -232,8 +250,8 @@
                 <div class="value-icon">
                     <i class="fas fa-globe-asia" aria-hidden="true"></i>
                 </div>
-                <h3 class="value-title">Global Vision</h3>
-                <p class="value-description">
+                <h3 class="value-title" data-i18n="about.values.global.title">Global Vision</h3>
+                <p class="value-description" data-i18n="about.values.global.desc">
                     A truly international perspective connecting the best of Asia, Europe, and America.
                 </p>
             </article>
@@ -245,9 +263,9 @@
 <section class="our-approach">
     <div class="container">
         <div class="section-header text-center">
-            <span class="section-subtitle">How We Work</span>
-            <h2 class="section-title">Our Approach</h2>
-            <p class="section-description">
+            <span class="section-subtitle" data-i18n="about.approach.subtitle">How We Work</span>
+            <h2 class="section-title" data-i18n="about.approach.title">Our Approach</h2>
+            <p class="section-description" data-i18n="about.approach.description">
                 A systematic methodology that ensures consistent excellence in every engagement.
             </p>
         </div>
@@ -255,17 +273,18 @@
             <div class="timeline-item">
                 <div class="timeline-number">01</div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title">Understanding Your Needs</h3>
-                    <p class="timeline-description">
-                        In-depth consultation to understand your specifications, budget, timeline, and quality requirements.
+                    <h3 class="timeline-title" data-i18n="about.approach.step1.title">Understanding Your Needs</h3>
+                    <p class="timeline-description" data-i18n="about.approach.step1.desc">
+                        In-depth consultation to understand your specifications, budget, timeline, and quality
+                        requirements.
                     </p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-number">02</div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title">Strategic Sourcing</h3>
-                    <p class="timeline-description">
+                    <h3 class="timeline-title" data-i18n="about.approach.step2.title">Strategic Sourcing</h3>
+                    <p class="timeline-description" data-i18n="about.approach.step2.desc">
                         Leveraging our global network to identify the most reliable suppliers that match your criteria.
                     </p>
                 </div>
@@ -273,8 +292,8 @@
             <div class="timeline-item">
                 <div class="timeline-number">03</div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title">Quality Assurance</h3>
-                    <p class="timeline-description">
+                    <h3 class="timeline-title" data-i18n="about.approach.step3.title">Quality Assurance</h3>
+                    <p class="timeline-description" data-i18n="about.approach.step3.desc">
                         Rigorous inspection and testing using Japanese precision and Swiss quality standards.
                     </p>
                 </div>
@@ -282,8 +301,8 @@
             <div class="timeline-item">
                 <div class="timeline-number">04</div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title">Seamless Logistics</h3>
-                    <p class="timeline-description">
+                    <h3 class="timeline-title" data-i18n="about.approach.step4.title">Seamless Logistics</h3>
+                    <p class="timeline-description" data-i18n="about.approach.step4.desc">
                         End-to-end coordination of shipping, customs, and delivery with real-time tracking.
                     </p>
                 </div>
@@ -291,8 +310,8 @@
             <div class="timeline-item">
                 <div class="timeline-number">05</div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title">Ongoing Support</h3>
-                    <p class="timeline-description">
+                    <h3 class="timeline-title" data-i18n="about.approach.step5.title">Ongoing Support</h3>
+                    <p class="timeline-description" data-i18n="about.approach.step5.desc">
                         Continuous partnership with after-sales support and supply chain optimization.
                     </p>
                 </div>
@@ -305,9 +324,9 @@
 <section class="geographic-reach">
     <div class="container">
         <div class="section-header text-center">
-            <span class="section-subtitle">Global Presence</span>
-            <h2 class="section-title">Where We Operate</h2>
-            <p class="section-description">
+            <span class="section-subtitle" data-i18n="about.geographic.subtitle">Global Presence</span>
+            <h2 class="section-title" data-i18n="about.geographic.title">Where We Operate</h2>
+            <p class="section-description" data-i18n="about.geographic.description">
                 Connecting three continents with reliable sourcing and logistics expertise.
             </p>
         </div>
@@ -316,42 +335,45 @@
                 <div class="region-icon">
                     <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                 </div>
-                <h3 class="region-name">Asia</h3>
-                <p class="region-description">
-                    Deep partnerships in China, Japan, South Korea, Thailand, Vietnam, and across Southeast Asia for manufacturing and sourcing excellence.
+                <h3 class="region-name" data-i18n="about.geographic.asia.name">Asia</h3>
+                <p class="region-description" data-i18n="about.geographic.asia.desc">
+                    Deep partnerships in China, Japan, South Korea, Thailand, Vietnam, and across Southeast Asia for
+                    manufacturing and sourcing excellence.
                 </p>
                 <ul class="region-highlights" role="list">
-                    <li>Manufacturing hubs</li>
-                    <li>Raw materials sourcing</li>
-                    <li>Electronics & components</li>
+                    <li data-i18n="about.geographic.asia.h1">Manufacturing hubs</li>
+                    <li data-i18n="about.geographic.asia.h2">Raw materials sourcing</li>
+                    <li data-i18n="about.geographic.asia.h3">Electronics & components</li>
                 </ul>
             </div>
             <div class="region-card">
                 <div class="region-icon">
                     <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                 </div>
-                <h3 class="region-name">Europe</h3>
-                <p class="region-description">
-                    Strategic connections in Switzerland, Germany, France, and across the EU for precision engineering and premium quality standards.
+                <h3 class="region-name" data-i18n="about.geographic.europe.name">Europe</h3>
+                <p class="region-description" data-i18n="about.geographic.europe.desc">
+                    Strategic connections in Switzerland, Germany, France, and across the EU for precision engineering
+                    and premium quality standards.
                 </p>
                 <ul class="region-highlights" role="list">
-                    <li>Precision engineering</li>
-                    <li>Quality certification</li>
-                    <li>Advanced materials</li>
+                    <li data-i18n="about.geographic.europe.h1">Precision engineering</li>
+                    <li data-i18n="about.geographic.europe.h2">Quality certification</li>
+                    <li data-i18n="about.geographic.europe.h3">Advanced materials</li>
                 </ul>
             </div>
             <div class="region-card">
                 <div class="region-icon">
                     <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                 </div>
-                <h3 class="region-name">America</h3>
-                <p class="region-description">
-                    Established presence in North and South America for distribution, last-mile logistics, and market intelligence.
+                <h3 class="region-name" data-i18n="about.geographic.america.name">America</h3>
+                <p class="region-description" data-i18n="about.geographic.america.desc">
+                    Established presence in North and South America for distribution, last-mile logistics, and market
+                    intelligence.
                 </p>
                 <ul class="region-highlights" role="list">
-                    <li>Distribution networks</li>
-                    <li>Market intelligence</li>
-                    <li>Customs expertise</li>
+                    <li data-i18n="about.geographic.america.h1">Distribution networks</li>
+                    <li data-i18n="about.geographic.america.h2">Market intelligence</li>
+                    <li data-i18n="about.geographic.america.h3">Customs expertise</li>
                 </ul>
             </div>
         </div>
@@ -362,41 +384,41 @@
 <section class="industries-section">
     <div class="container">
         <div class="section-header text-center">
-            <span class="section-subtitle">Expertise Across Sectors</span>
-            <h2 class="section-title">Industries We Serve</h2>
+            <span class="section-subtitle" data-i18n="about.industries.subtitle">Expertise Across Sectors</span>
+            <h2 class="section-title" data-i18n="about.industries.title">Industries We Serve</h2>
         </div>
         <div class="industries-list">
             <div class="industry-item">
                 <i class="fas fa-flask" aria-hidden="true"></i>
-                <span>Polymers & Chemicals</span>
+                <span data-i18n="about.industries.polymers">Polymers & Chemicals</span>
             </div>
             <div class="industry-item">
                 <i class="fas fa-microchip" aria-hidden="true"></i>
-                <span>Electronics & Components</span>
+                <span data-i18n="about.industries.electronics">Electronics & Components</span>
             </div>
             <div class="industry-item">
                 <i class="fas fa-box" aria-hidden="true"></i>
-                <span>Packaging Solutions</span>
+                <span data-i18n="about.industries.packaging">Packaging Solutions</span>
             </div>
             <div class="industry-item">
                 <i class="fas fa-cogs" aria-hidden="true"></i>
-                <span>Industrial Equipment</span>
+                <span data-i18n="about.industries.industrial">Industrial Equipment</span>
             </div>
             <div class="industry-item">
                 <i class="fas fa-wrench" aria-hidden="true"></i>
-                <span>Hardware & Fasteners</span>
+                <span data-i18n="about.industries.hardware">Hardware & Fasteners</span>
             </div>
             <div class="industry-item">
                 <i class="fas fa-drafting-compass" aria-hidden="true"></i>
-                <span>Engineering Services</span>
+                <span data-i18n="about.industries.engineering">Engineering Services</span>
             </div>
             <div class="industry-item">
                 <i class="fas fa-car" aria-hidden="true"></i>
-                <span>Automotive Parts</span>
+                <span data-i18n="about.industries.automotive">Automotive Parts</span>
             </div>
             <div class="industry-item">
                 <i class="fas fa-heartbeat" aria-hidden="true"></i>
-                <span>Medical Devices</span>
+                <span data-i18n="about.industries.medical">Medical Devices</span>
             </div>
         </div>
     </div>
@@ -409,9 +431,10 @@
             <div class="cta-icon-wrapper">
                 <i class="fas fa-handshake"></i>
             </div>
-            <h2 class="cta-title">Ready to Experience the KOATSU Difference?</h2>
-            <p class="cta-description">
-                Let's discuss how our global network and expertise can optimize your supply chain and reduce costs while maintaining premium quality.
+            <h2 class="cta-title" data-i18n="about.cta.title">Ready to Experience the KOATSU Difference?</h2>
+            <p class="cta-description" data-i18n="about.cta.description">
+                Let's discuss how our global network and expertise can optimize your supply chain and reduce costs while
+                maintaining premium quality.
             </p>
             <div class="cta-buttons">
                 <a href="{% url 'site:services' %}" class="btn-cta btn-cta-primary" aria-label="Explore our services">
@@ -419,20 +442,22 @@
                         <i class="fas fa-briefcase" aria-hidden="true"></i>
                     </span>
                     <span class="btn-cta-text">
-                        <span class="btn-cta-main">Explore Our Services</span>
-                        <span class="btn-cta-sub">Discover what we can do for you</span>
+                        <span class="btn-cta-main" data-i18n="about.cta.services">Explore Our Services</span>
+                        <span class="btn-cta-sub" data-i18n="about.cta.services.sub">Discover what we can do for
+                            you</span>
                     </span>
                     <span class="btn-cta-arrow">
                         <i class="fas fa-arrow-right"></i>
                     </span>
                 </a>
-                <a href="#contact" class="btn-cta btn-cta-secondary" aria-label="Contact us for consultation">
+                <a href="{% url 'site:contact' %}#contact-form" class="btn-cta btn-cta-secondary"
+                    aria-label="Contact us for consultation">
                     <span class="btn-cta-icon">
                         <i class="fas fa-envelope" aria-hidden="true"></i>
                     </span>
                     <span class="btn-cta-text">
-                        <span class="btn-cta-main">Get in Touch</span>
-                        <span class="btn-cta-sub">Let's start a conversation</span>
+                        <span class="btn-cta-main" data-i18n="about.cta.contact">Get in Touch</span>
+                        <span class="btn-cta-sub" data-i18n="about.cta.contact.sub">Let's start a conversation</span>
                     </span>
                     <span class="btn-cta-arrow">
                         <i class="fas fa-arrow-right"></i>

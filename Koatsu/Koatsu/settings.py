@@ -56,6 +56,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Custom middlewares KOATSU
+    'Koatsu.middleware.CookieConsentMiddleware',  # Gestion consentement GDPR
+    'Koatsu.middleware.LanguageMiddleware',  # Gestion de la langue
 ]
 
 ROOT_URLCONF = 'Koatsu.urls'

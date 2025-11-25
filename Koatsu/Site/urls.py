@@ -13,4 +13,9 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     # Page contact
     path('contact/', views.contact, name='contact'),
+
+    # API Cookies et Langue
+    path('api/cookie-consent/', views.set_cookie_consent, name='cookie_consent'),
+    path('api/set-language/', views.set_language, name='set_language'),
+    path('api/cookie-status/', views.get_cookie_status, name='cookie_status'),
 ]

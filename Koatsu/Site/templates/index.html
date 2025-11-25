@@ -12,7 +12,7 @@
             <div class="splash-title" role="heading" aria-level="1">
                 <span class="splash-text">KOA</span><span class="splash-text">TSU</span>
             </div>
-            <p class="splash-tagline">Transport & Logistique</p>
+            <p class="splash-tagline" data-i18n="splash.tagline">Transport & Logistics</p>
         </div>
 
         <!-- Animation de transport -->
@@ -29,7 +29,7 @@
 
         <!-- Texte de chargement -->
         <div class="splash-loading">
-            <p class="loading-text">Chargement en cours...</p>
+            <p class="loading-text" data-i18n="splash.loading">Loading...</p>
             <div class="loading-dots">
                 <span class="dot"></span>
                 <span class="dot"></span>
@@ -45,18 +45,17 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div class="container">
-            <p class="hero-subtitle">Continental</p>
-            <h1 class="hero-title">Transportation</h1>
-            <p class="hero-description">
-                Transport or transportation is the movement of humans, animals<br>
-                and goods from one location to another.
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Continental</p>
+            <h1 class="hero-title" data-i18n="hero.title">Transportation</h1>
+            <p class="hero-description" data-i18n="hero.description">
+                Transport or transportation is the movement of humans, animals and goods from one location to another.
             </p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-file-invoice"></i> Request Quote
+                <a href="{% url 'site:contact' %}#contact-form" class="btn btn-primary">
+                    <i class="fas fa-file-invoice"></i> <span data-i18n="hero.btn.quote">Request Quote</span>
                 </a>
-                <a href="#about" class="btn btn-secondary">
-                    <i class="fas fa-arrow-right"></i> Learn More
+                <a href="{% url 'site:services' %}" class="btn btn-secondary">
+                    <i class="fas fa-arrow-right"></i> <span data-i18n="hero.btn.learn">Learn More</span>
                 </a>
             </div>
         </div>
@@ -78,9 +77,10 @@
                                 <div class="slide-icon">
                                     <i class="fas fa-truck" aria-hidden="true"></i>
                                 </div>
-                                <p class="slide-title"><strong>Ground Transport</strong></p>
+                                <p class="slide-title"><strong data-i18n="services.ground">Ground Transport</strong></p>
                                 <a href="#" class="slide-link" aria-label="Discover more about Ground Transport">
-                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> <span
+                                        data-i18n="services.discover">Discover More</span>
                                 </a>
                             </div>
                         </div>
@@ -92,9 +92,10 @@
                                 <div class="slide-icon">
                                     <i class="fas fa-warehouse" aria-hidden="true"></i>
                                 </div>
-                                <p class="slide-title"><strong>Ware Housing</strong></p>
+                                <p class="slide-title"><strong data-i18n="services.warehouse">Ware Housing</strong></p>
                                 <a href="#" class="slide-link" aria-label="Discover more about Ware Housing">
-                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> <span
+                                        data-i18n="services.discover">Discover More</span>
                                 </a>
                             </div>
                         </div>
@@ -106,9 +107,10 @@
                                 <div class="slide-icon">
                                     <i class="fas fa-plane" aria-hidden="true"></i>
                                 </div>
-                                <p class="slide-title"><strong>Air Transport</strong></p>
+                                <p class="slide-title"><strong data-i18n="services.air">Air Transport</strong></p>
                                 <a href="#" class="slide-link" aria-label="Discover more about Air Transport">
-                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> <span
+                                        data-i18n="services.discover">Discover More</span>
                                 </a>
                             </div>
                         </div>
@@ -120,9 +122,11 @@
                                 <div class="slide-icon">
                                     <i class="fas fa-ship" aria-hidden="true"></i>
                                 </div>
-                                <p class="slide-title"><strong>Maritime Transport</strong></p>
+                                <p class="slide-title"><strong data-i18n="services.maritime">Maritime Transport</strong>
+                                </p>
                                 <a href="#" class="slide-link" aria-label="Discover more about Maritime Transport">
-                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> Discover More
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> <span
+                                        data-i18n="services.discover">Discover More</span>
                                 </a>
                             </div>
                         </div>
@@ -144,9 +148,9 @@
 
             <!-- Texte à droite -->
             <div class="services-text">
-                <p class="services-subtitle">Core Services</p>
-                <h2 class="services-title">Transport is defined As a movement</h2>
-                <p class="services-description">
+                <p class="services-subtitle" data-i18n="services.subtitle">Core Services</p>
+                <h2 class="services-title" data-i18n="services.title">Transport is defined As a movement</h2>
+                <p class="services-description" data-i18n="services.description">
                     Transport or transportation is the movement of humans, animals and goods from one location to
                     another. In other words, the action of transport is defined as a particular movement of an organism
                     or thing from a point A to a Point B. Modes of transport include air, land (rail and road) water,
@@ -154,7 +158,7 @@
                     Transport enables trade between people, which is essential for the development of civilizations.
                 </p>
                 <a href="#services" class="btn btn-services">
-                    <i class="fas fa-briefcase"></i> More Services
+                    <i class="fas fa-briefcase"></i> <span data-i18n="services.btn">More Services</span>
                 </a>
             </div>
         </div>
@@ -167,18 +171,18 @@
         <div class="quote-content">
             <!-- Étapes à gauche -->
             <div class="quote-steps">
-                <p class="quote-subtitle">How It Works</p>
-                <h2 class="quote-title">Transport Fixed Consists Of Fixed.</h2>
+                <p class="quote-subtitle" data-i18n="quote.subtitle">How It Works</p>
+                <h2 class="quote-title" data-i18n="quote.title">Transport Fixed Consists Of Fixed.</h2>
 
                 <div class="steps-list">
                     <!-- Étape 1 -->
                     <div class="step-item">
                         <div class="step-number" aria-hidden="true">01</div>
                         <div class="step-info">
-                            <h3 class="step-title">Entrer vos coordonnées</h3>
-                            <p class="step-description">Fournissez-nous vos informations de contact afin que nous
-                                puissions vous joindre rapidement. Votre nom et votre adresse courriel sont essentiels
-                                pour traiter votre demande.</p>
+                            <h3 class="step-title" data-i18n="quote.step1.title">Enter your details</h3>
+                            <p class="step-description" data-i18n="quote.step1.desc">Provide us with your contact
+                                information so we can reach you quickly. Your name and email are essential to process
+                                your request.</p>
                         </div>
                     </div>
 
@@ -186,10 +190,10 @@
                     <div class="step-item">
                         <div class="step-number" aria-hidden="true">02</div>
                         <div class="step-info">
-                            <h3 class="step-title">Entrer les détails de ce que vous voulez</h3>
-                            <p class="step-description">Décrivez en détail vos besoins en matière de transport et
-                                logistique. Plus vous nous donnez d'informations, mieux nous pourrons répondre à vos
-                                attentes.</p>
+                            <h3 class="step-title" data-i18n="quote.step2.title">Enter what you want</h3>
+                            <p class="step-description" data-i18n="quote.step2.desc">Describe in detail your transport
+                                and logistics needs. The more information you give us, the better we can meet your
+                                expectations.</p>
                         </div>
                     </div>
 
@@ -197,10 +201,10 @@
                     <div class="step-item">
                         <div class="step-number" aria-hidden="true">03</div>
                         <div class="step-info">
-                            <h3 class="step-title">Nous allons vous contacter</h3>
-                            <p class="step-description">Notre équipe d'experts prendra contact avec vous dans les plus
-                                brefs délais pour discuter de votre projet et vous proposer la meilleure solution de
-                                transport.</p>
+                            <h3 class="step-title" data-i18n="quote.step3.title">We will contact you</h3>
+                            <p class="step-description" data-i18n="quote.step3.desc">Our team of experts will contact
+                                you as soon as possible to discuss your project and offer you the best transport
+                                solution.</p>
                         </div>
                     </div>
                 </div>
@@ -209,44 +213,48 @@
             <!-- Formulaire à droite -->
             <div class="quote-form-container">
                 <div class="quote-form-card">
-                    <h3 class="form-heading">We Are here<br>Get A Free Quote</h3>
+                    <h3 class="form-heading" data-i18n="quote.form.heading">We Are here<br>Get A Free Quote</h3>
 
                     <form id="quoteForm" class="quote-form">
                         <!-- Champ Nom -->
                         <div class="form-group">
                             <label for="userName" class="visually-hidden">Your Name</label>
                             <input type="text" id="userName" name="name" placeholder="Enter your name"
+                                data-i18n="quote.form.name" data-i18n-attr="placeholder"
                                 aria-label="Enter your full name" aria-required="true" aria-describedby="userName-error"
                                 required>
                             <i class="fas fa-user form-icon" aria-hidden="true"></i>
-                            <span class="error-message" id="userName-error" role="alert">The field is required.</span>
+                            <span class="error-message" id="userName-error" role="alert"
+                                data-i18n="quote.form.error">This field is required.</span>
                         </div>
 
                         <!-- Champ Email -->
                         <div class="form-group">
                             <label for="userEmail" class="visually-hidden">Your Email</label>
                             <input type="email" id="userEmail" name="email" placeholder="Enter your email"
+                                data-i18n="quote.form.email" data-i18n-attr="placeholder"
                                 aria-label="Enter your email address" aria-required="true"
                                 aria-describedby="userEmail-error" required>
                             <i class="fas fa-envelope form-icon" aria-hidden="true"></i>
-                            <span class="error-message" id="userEmail-error" role="alert">The field is required.</span>
+                            <span class="error-message" id="userEmail-error" role="alert"
+                                data-i18n="quote.form.error">This field is required.</span>
                         </div>
 
                         <!-- Champ Détails -->
                         <div class="form-group">
                             <label for="userDetails" class="visually-hidden">Your Requirements</label>
                             <textarea id="userDetails" name="details" rows="5"
-                                placeholder="Enter your details & requirements"
-                                aria-label="Enter your details and requirements" aria-required="true"
-                                aria-describedby="userDetails-error" required></textarea>
+                                placeholder="Enter your details & requirements" data-i18n="quote.form.details"
+                                data-i18n-attr="placeholder" aria-label="Enter your details and requirements"
+                                aria-required="true" aria-describedby="userDetails-error" required></textarea>
                             <i class="fas fa-comment form-icon" aria-hidden="true"></i>
-                            <span class="error-message" id="userDetails-error" role="alert">The field is
-                                required.</span>
+                            <span class="error-message" id="userDetails-error" role="alert"
+                                data-i18n="quote.form.error">This field is required.</span>
                         </div>
 
                         <!-- Bouton Submit -->
                         <button type="submit" class="btn btn-submit">
-                            <i class="fas fa-paper-plane"></i> Submit Now
+                            <i class="fas fa-paper-plane"></i> <span data-i18n="quote.form.submit">Submit Now</span>
                         </button>
                     </form>
                 </div>
@@ -259,7 +267,7 @@
 <section class="contact-section">
     <div class="container">
         <div class="section-header text-center">
-            <h2 class="section-title">Our Place</h2>
+            <h2 class="section-title" data-i18n="contact.title">Our Place</h2>
             <div class="title-underline" aria-hidden="true"></div>
         </div>
         <div class="contact-content">
@@ -277,8 +285,8 @@
             <div class="contact-info">
                 <div class="contact-card">
                     <div class="contact-header">
-                        <h3 class="contact-title">Office Address</h3>
-                        <p class="contact-subtitle">KOATSU Global</p>
+                        <h3 class="contact-title" data-i18n="contact.office.title">Office Address</h3>
+                        <p class="contact-subtitle" data-i18n="contact.office.subtitle">KOATSU Global</p>
                     </div>
 
                     <div class="contact-details">
@@ -288,8 +296,9 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="contact-text">
-                                <span class="contact-label">Email</span>
-                                <a href="mailto:info@koatsuglobal.com" class="contact-value">info@koatsuglobal.com</a>
+                                <span class="contact-label" data-i18n="contact.email">Email</span>
+                                <a href="mailto:contact@koatsu-global.com"
+                                    class="contact-value">contact@koatsu-global.com</a>
                             </div>
                         </div>
 
@@ -299,7 +308,7 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="contact-text">
-                                <span class="contact-label">Phone</span>
+                                <span class="contact-label" data-i18n="contact.phone">Phone</span>
                                 <a href="tel:+1234567890" class="contact-value">+1 (234) 567-890</a>
                             </div>
                         </div>
@@ -310,8 +319,9 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="contact-text">
-                                <span class="contact-label">Tokyo Office</span>
-                                <p class="contact-value">Harajuku, Shibuya-ku<br>Tokyo, Japan</p>
+                                <span class="contact-label" data-i18n="contact.address.label">Tokyo Office</span>
+                                <p class="contact-value" data-i18n="contact.address.value">Harajuku,
+                                    Shibuya-ku<br>Tokyo, Japan</p>
                             </div>
                         </div>
 
@@ -319,7 +329,7 @@
 
                     <!-- Bouton d'action -->
                     <a href="https://www.google.com/maps/dir//TOKYO+OFFICE" target="_blank" class="btn btn-contact">
-                        <i class="fas fa-location-arrow"></i> Get Direction
+                        <i class="fas fa-location-arrow"></i> <span data-i18n="contact.btn">Get Direction</span>
                     </a>
                 </div>
             </div>
