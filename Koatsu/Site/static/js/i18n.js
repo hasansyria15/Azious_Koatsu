@@ -25,6 +25,9 @@ const I18n = {
     // Traductions
     translations: {
         en: {
+            // ============ PAGE TITLE ============
+            'page.title': 'KOATSU - Precision in Worldwide Sourcing',
+
             // ============ COOKIE BANNER ============
             'cookie.title': 'Cookie Settings',
             'cookie.description': 'We use cookies to enhance your browsing experience, provide personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.',
@@ -52,9 +55,9 @@ const I18n = {
             'splash.loading': 'Loading...',
 
             // ============ HERO SECTION ============
-            'hero.subtitle': 'Continental',
-            'hero.title': 'Transportation',
-            'hero.description': 'Transport or transportation is the movement of humans, animals and goods from one location to another.',
+            'hero.subtitle': 'Global Sourcing',
+            'hero.title': 'Japanese Precision',
+            'hero.description': 'Connecting businesses worldwide with quality industrial supplies, seamless logistics, and rigorous quality control — powered by Japanese expertise.',
             'hero.btn.quote': 'Request Quote',
             'hero.btn.learn': 'Learn More',
 
@@ -71,14 +74,14 @@ const I18n = {
 
             // ============ QUOTE SECTION ============
             'quote.subtitle': 'How It Works',
-            'quote.title': 'Transport Fixed Consists Of Fixed.',
-            'quote.step1.title': 'Enter your details',
-            'quote.step1.desc': 'Provide us with your contact information so we can reach you quickly. Your name and email are essential to process your request.',
-            'quote.step2.title': 'Enter what you want',
-            'quote.step2.desc': 'Describe in detail your transport and logistics needs. The more information you give us, the better we can meet your expectations.',
-            'quote.step3.title': 'We will contact you',
-            'quote.step3.desc': 'Our team of experts will contact you as soon as possible to discuss your project and offer you the best transport solution.',
-            'quote.form.heading': 'We Are here<br>Get A Free Quote',
+            'quote.title': 'Simple Steps to Get Started',
+            'quote.step1.title': 'Share Your Details',
+            'quote.step1.desc': 'Provide us with your contact information and company details so we can understand your business context and reach you quickly.',
+            'quote.step2.title': 'Describe Your Needs',
+            'quote.step2.desc': 'Tell us about your sourcing requirements, logistics challenges, or consulting needs. The more details you share, the better we can tailor our solutions.',
+            'quote.step3.title': 'Get Expert Support',
+            'quote.step3.desc': 'Our team of specialists will analyze your request and contact you promptly to discuss customized solutions for your business.',
+            'quote.form.heading': 'We Are Here<br>Get A Free Quote',
             'quote.form.name': 'Enter your name',
             'quote.form.email': 'Enter your email',
             'quote.form.details': 'Enter your details & requirements',
@@ -98,15 +101,13 @@ const I18n = {
             'contact.btn': 'Get Direction',
 
             // ============ FOOTER ============
-            'footer.description': 'Transport infrastructure consists of the fixed installations and including roads, railways, airways, waterways, canals and pipelines and terminals such as airports, railway stations, bus stations, trucking terminals, warehouses, refueling depots including fueling.',
+            'footer.description': 'KOATSU connects businesses worldwide with quality industrial supplies, reliable sourcing solutions, and seamless logistics — powered by Japanese precision and expertise.',
             'footer.quicklinks': 'Quick Links',
             'footer.hours.title': 'Working Hours',
             'footer.hours.weekdays': 'Mon - Fri',
-            'footer.hours.weekdays.time': '09:00 - 17:00',
-            'footer.hours.saturday': 'Saturday',
-            'footer.hours.saturday.time': '10:00 - 14:00',
-            'footer.hours.sunday': 'Sunday',
-            'footer.hours.sunday.time': 'Closed',
+            'footer.hours.weekdays.time': '08:00 - 18:00',
+            'footer.hours.weekend': 'Sat - Sun',
+            'footer.hours.weekend.time': 'Closed',
             'footer.hours.note': '<strong>Note:</strong> We are available 24/7 for emergencies and urgent logistics needs.',
             'footer.copyright': '© 2025 KOATSU. All rights reserved.',
             'footer.privacy': 'Privacy Policy',
@@ -335,7 +336,10 @@ const I18n = {
             'contact.why.item1': 'Multinational presence across Japan and China',
             'contact.why.item2': 'Trusted network of certified manufacturers across Asia and Europe',
             'contact.why.item3': 'Proven expertise in industrial, electronic, and packaging sectors',
-            'contact.why.item4': 'Lean and disciplined operations, inspired by Japanese minimalism',
+            'contact.why.item4': 'End-to-end logistics solutions: maritime, air freight, and ground transport',
+            'contact.why.item5': 'Rigorous quality control and factory audits',
+            'contact.why.item6': 'Strategic consulting for supply chain optimization',
+            'contact.why.item7': 'Lean and disciplined operations, inspired by Japanese minimalism',
 
             // Form
             'contact.form.title': 'Send Us a Message',
@@ -352,8 +356,8 @@ const I18n = {
 
             // Contact Info
             'contact.info.subtitle': 'Contact Us',
-            'contact.info.title': 'Koatsu Global Limited',
-            'contact.info.locations': 'Tokyo | Xiamen | Global',
+            'contact.info.title': 'Koatsu Limited',
+            'contact.info.locations': 'Tokyo | Xiamen',
             'contact.info.email.title': 'Email',
             'contact.info.hours.title': 'Business Hours',
             'contact.info.hours.value': 'Mon - Fri: 9:00 - 18:00 JST',
@@ -361,6 +365,9 @@ const I18n = {
         },
 
         ja: {
+            // ============ PAGE TITLE ============
+            'page.title': 'KOATSU - 世界規模の調達における精度',
+
             // ============ COOKIE BANNER ============
             'cookie.title': 'Cookieの設定',
             'cookie.description': '当サイトでは、ブラウジング体験の向上、パーソナライズされたコンテンツの提供、トラフィックの分析のためにCookieを使用しています。「すべて許可」をクリックすると、Cookieの使用に同意したことになります。',
@@ -388,9 +395,9 @@ const I18n = {
             'splash.loading': '読み込み中...',
 
             // ============ HERO SECTION ============
-            'hero.subtitle': '大陸間',
-            'hero.title': '輸送サービス',
-            'hero.description': '輸送とは、人、動物、物品をある場所から別の場所へ移動させることです。',
+            'hero.subtitle': 'グローバル調達',
+            'hero.title': '日本品質の精度',
+            'hero.description': '高品質な産業用資材、シームレスな物流、厳格な品質管理で世界中のビジネスをつなぐ — 日本の専門知識で実現。',
             'hero.btn.quote': '見積もり依頼',
             'hero.btn.learn': '詳しく見る',
 
@@ -407,13 +414,13 @@ const I18n = {
 
             // ============ QUOTE SECTION ============
             'quote.subtitle': 'ご利用方法',
-            'quote.title': '輸送インフラは固定設備で構成されています',
-            'quote.step1.title': '連絡先を入力',
-            'quote.step1.desc': '迅速にご連絡できるよう、連絡先情報をご提供ください。お名前とメールアドレスはご依頼を処理するために必要です。',
-            'quote.step2.title': 'ご要望を入力',
-            'quote.step2.desc': '輸送・物流のニーズを詳しくお書きください。詳細な情報をいただければいただくほど、お客様のご期待に応えることができます。',
-            'quote.step3.title': 'ご連絡いたします',
-            'quote.step3.desc': '当社の専門家チームが、お客様のプロジェクトについてご相談し、最適な輸送ソリューションをご提案するため、できるだけ早くご連絡いたします。',
+            'quote.title': '簡単なステップで始めましょう',
+            'quote.step1.title': '情報を共有',
+            'quote.step1.desc': 'お客様のビジネス背景を理解し、迅速にご連絡できるよう、連絡先と会社情報をお知らせください。',
+            'quote.step2.title': 'ニーズを記載',
+            'quote.step2.desc': '調達要件、物流の課題、またはコンサルティングのニーズをお聞かせください。詳細を共有いただくほど、最適なソリューションをご提案できます。',
+            'quote.step3.title': '専門サポート',
+            'quote.step3.desc': '当社の専門チームがご要望を分析し、お客様のビジネスに合わせたカスタマイズソリューションをご提案するため、迅速にご連絡いたします。',
             'quote.form.heading': 'お気軽にどうぞ<br>無料見積もり',
             'quote.form.name': 'お名前を入力',
             'quote.form.email': 'メールアドレスを入力',
@@ -434,15 +441,13 @@ const I18n = {
             'contact.btn': '道順を見る',
 
             // ============ FOOTER ============
-            'footer.description': '輸送インフラは、道路、鉄道、航空路、水路、運河、パイプライン、そして空港、鉄道駅、バスターミナル、トラックターミナル、倉庫、給油所などのターミナルを含む固定設備で構成されています。',
+            'footer.description': 'KOATSUは、高品質な工業用品、信頼性の高い調達ソリューション、シームレスな物流で世界中のビジネスをつなぎます — 日本の精度と専門知識を活かして。',
             'footer.quicklinks': 'クイックリンク',
             'footer.hours.title': '営業時間',
             'footer.hours.weekdays': '月曜〜金曜',
-            'footer.hours.weekdays.time': '09:00 - 17:00',
-            'footer.hours.saturday': '土曜日',
-            'footer.hours.saturday.time': '10:00 - 14:00',
-            'footer.hours.sunday': '日曜日',
-            'footer.hours.sunday.time': '休業',
+            'footer.hours.weekdays.time': '08:00 - 18:00',
+            'footer.hours.weekend': '土日',
+            'footer.hours.weekend.time': '休業',
             'footer.hours.note': '<strong>注：</strong>緊急の物流ニーズには24時間年中無休で対応しています。',
             'footer.copyright': '© 2025 KOATSU. 全著作権所有。',
             'footer.privacy': 'プライバシーポリシー',
@@ -671,7 +676,10 @@ const I18n = {
             'contact.why.item1': '日本と中国にまたがる多国籍プレゼンス',
             'contact.why.item2': 'アジアとヨーロッパの認定メーカーの信頼できるネットワーク',
             'contact.why.item3': '産業、電子、パッケージング分野での実績ある専門知識',
-            'contact.why.item4': '日本のミニマリズムに着想を得たリーンで規律ある運営',
+            'contact.why.item4': 'エンドツーエンドの物流ソリューション：海上、航空、陸上輸送',
+            'contact.why.item5': '厳格な品質管理と工場監査',
+            'contact.why.item6': 'サプライチェーン最適化のための戦略コンサルティング',
+            'contact.why.item7': '日本のミニマリズムに着想を得たリーンで規律ある運営',
 
             // Form
             'contact.form.title': 'メッセージを送る',
@@ -688,8 +696,8 @@ const I18n = {
 
             // Contact Info
             'contact.info.subtitle': 'お問い合わせ',
-            'contact.info.title': 'Koatsu Global Limited',
-            'contact.info.locations': '東京 | 厦門 | グローバル',
+            'contact.info.title': 'Koatsu Limited',
+            'contact.info.locations': '東京 | 厦門',
             'contact.info.email.title': 'メール',
             'contact.info.hours.title': '営業時間',
             'contact.info.hours.value': '月〜金：9:00 - 18:00 JST',
@@ -769,6 +777,12 @@ const I18n = {
 
         // Mettre à jour l'attribut lang du document
         document.documentElement.lang = this.currentLang;
+
+        // Mettre à jour le titre de la page
+        const pageTitle = this.t('page.title');
+        if (pageTitle) {
+            document.title = pageTitle;
+        }
     },
 
     /**
