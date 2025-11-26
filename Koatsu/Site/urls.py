@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .robots import robots_txt
 
 app_name = 'site'
 
@@ -13,6 +14,9 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     # Page contact
     path('contact/', views.contact, name='contact'),
+
+    # SEO
+    path('robots.txt', robots_txt, name='robots_txt'),
 
     # API Cookies et Langue
     path('api/cookie-consent/', views.set_cookie_consent, name='cookie_consent'),
