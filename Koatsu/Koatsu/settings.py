@@ -187,5 +187,5 @@ EMAIL_HOST_PASSWORD = 'gnqf ygth wolc zrgx'  # Mot de passe d'application Gmail
 EMAIL_TIMEOUT = 30
 
 # Email de destination pour les formulaires de contact
-CONTACT_EMAIL = 'contact@koatsu-global.com'
+CONTACT_EMAIL = 'ceo@koatsu-global.com'
 DEFAULT_FROM_EMAIL = 'koatsuglobal@gmail.com'
