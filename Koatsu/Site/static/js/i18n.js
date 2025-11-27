@@ -134,6 +134,7 @@ const I18n = {
             'about.whoweare.quality': 'Quality Assurance',
             'about.whoweare.network': 'Global Network',
             'about.whoweare.consulting': 'Expert Consulting',
+            'about.whoweare.supplychain': 'Supply Chain',
 
             'about.philosophy.subtitle': 'Our Philosophy',
             'about.philosophy.title': 'Discipline. Integrity. Flexibility. Excellence.',
@@ -474,6 +475,7 @@ const I18n = {
             'about.whoweare.quality': '品質保証',
             'about.whoweare.network': 'グローバルネットワーク',
             'about.whoweare.consulting': '専門コンサルティング',
+            'about.whoweare.supplychain': 'サプライチェーン',
 
             'about.philosophy.subtitle': '私たちの哲学',
             'about.philosophy.title': '規律。誠実さ。柔軟性。卓越性。',
