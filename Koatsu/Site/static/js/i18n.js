@@ -9,7 +9,7 @@
 const I18n = {
     // Configuration
     config: {
-        defaultLang: 'en',
+        defaultLang: 'ja',
         supportedLangs: ['en', 'ja'],
         apiEndpoints: {
             setLanguage: '/api/set-language/',
@@ -62,9 +62,9 @@ const I18n = {
             'hero.btn.learn': 'Learn More',
 
             // ============ SERVICES SECTION ============
-            'services.subtitle': 'Core Services',
-            'services.title': 'Transport is defined As a movement',
-            'services.description': 'Transport or transportation is the movement of humans, animals and goods from one location to another. In other words, the action of transport is defined as a particular movement of an organism or thing from a point A to a Point B. Modes of transport include air, land (rail and road) water, cable, pipeline and space. The field can be divided into infrastructure, vehicles and operations. Transport enables trade between people, which is essential for the development of civilizations.',
+            'services.subtitle': 'What We Do',
+            'services.title': 'End-to-End Solutions for Your Business',
+            'services.description': 'KOATSU delivers comprehensive sourcing, logistics, and consulting services tailored to your business needs. From identifying reliable suppliers across Asia and Europe to managing complex supply chains and ensuring product quality, we provide the expertise and network to help your business thrive in the global market.',
             'services.btn': 'More Services',
             'services.ground': 'Ground Transport',
             'services.warehouse': 'Warehousing',
@@ -284,7 +284,7 @@ const I18n = {
             'services.why.title': 'Your Trusted Partner in Global Trade',
             'services.why.description': 'Combining Japanese precision with Swiss reliability, we deliver excellence at every step.',
             'services.why.network.title': 'Global Network',
-            'services.why.network.desc': 'Asia, North America, Europe, and beyond',
+            'services.why.network.desc': 'Extensive partnerships across Asia, America, and Europe for seamless sourcing and reliable supply chain solutions.',
             'services.why.zerodefect.title': 'Zero-Defect Focus',
             'services.why.zerodefect.desc': 'Japanese quality standards combined with Swiss precision for flawless results.',
             'services.why.team.title': 'Expert Team',
@@ -402,9 +402,9 @@ const I18n = {
             'hero.btn.learn': '詳しく見る',
 
             // ============ SERVICES SECTION ============
-            'services.subtitle': '主要サービス',
-            'services.title': '輸送は移動として定義されます',
-            'services.description': '輸送とは、人、動物、物品をある場所から別の場所へ移動させることです。つまり、輸送とは、生物や物体をA地点からB地点へ移動させる特定の動作として定義されます。輸送手段には、航空、陸上（鉄道と道路）、水上、ケーブル、パイプライン、宇宙が含まれます。この分野は、インフラストラクチャ、車両、運用に分けることができます。輸送は人々の間の貿易を可能にし、文明の発展に不可欠です。',
+            'services.subtitle': '事業内容',
+            'services.title': 'ビジネスのためのトータルソリューション',
+            'services.description': 'KOATSUは、お客様のビジネスニーズに合わせた包括的な調達、物流、コンサルティングサービスを提供します。アジアとヨーロッパ全域で信頼できるサプライヤーを見つけることから、複雑なサプライチェーンの管理、製品品質の確保まで、グローバル市場でお客様のビジネスの成功を支える専門知識とネットワークを提供します。',
             'services.btn': 'その他のサービス',
             'services.ground': '陸上輸送',
             'services.warehouse': '倉庫保管',
@@ -624,7 +624,7 @@ const I18n = {
             'services.why.title': 'グローバル貿易における信頼できるパートナー',
             'services.why.description': '日本の精密さとスイスの信頼性を組み合わせ、あらゆる段階で卓越性を提供します。',
             'services.why.network.title': 'グローバルネットワーク',
-            'services.why.network.desc': 'アジア、北米、ヨーロッパ、その先へ',
+            'services.why.network.desc': 'アジア、アメリカ、ヨーロッパ全域にわたる幅広いパートナーシップで、シームレスな調達と信頼性の高いサプライチェーンソリューションを提供します。',
             'services.why.zerodefect.title': 'ゼロ欠陥フォーカス',
             'services.why.zerodefect.desc': '完璧な結果のための日本の品質基準とスイスの精密さの組み合わせ。',
             'services.why.team.title': '専門チーム',

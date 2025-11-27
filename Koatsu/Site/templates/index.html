@@ -73,13 +73,14 @@
                     <div class="carousel-track" id="servicesCarousel">
                         <!-- Slide 1 - Ground Transport -->
                         <div class="carousel-slide active">
-                            <img src="{% static 'img/services/service1.png' %}" alt="Ground Transport">
+                            <img src="{% static 'img/transport/Groundtransport.png' %}" alt="Ground Transport">
                             <div class="slide-overlay">
                                 <div class="slide-icon">
                                     <i class="fas fa-truck" aria-hidden="true"></i>
                                 </div>
                                 <p class="slide-title"><strong data-i18n="services.ground">Ground Transport</strong></p>
-                                <a href="#" class="slide-link" aria-label="Discover more about Ground Transport">
+                                <a href="{% url 'site:services' %}#ground-transport" class="slide-link"
+                                    aria-label="Discover more about Ground Transport">
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i> <span
                                         data-i18n="services.discover">Discover More</span>
                                 </a>
@@ -88,13 +89,14 @@
 
                         <!-- Slide 2 - Ware Housing -->
                         <div class="carousel-slide">
-                            <img src="{% static 'img/services/service2.png' %}" alt="Ware Housing">
+                            <img src="{% static 'img/transport/warehousing.png' %}" alt="Ware Housing">
                             <div class="slide-overlay">
                                 <div class="slide-icon">
                                     <i class="fas fa-warehouse" aria-hidden="true"></i>
                                 </div>
                                 <p class="slide-title"><strong data-i18n="services.warehouse">Ware Housing</strong></p>
-                                <a href="#" class="slide-link" aria-label="Discover more about Ware Housing">
+                                <a href="{% url 'site:services' %}#warehousing" class="slide-link"
+                                    aria-label="Discover more about Ware Housing">
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i> <span
                                         data-i18n="services.discover">Discover More</span>
                                 </a>
@@ -103,13 +105,14 @@
 
                         <!-- Slide 3 - Air Transport -->
                         <div class="carousel-slide">
-                            <img src="{% static 'img/services/service3.png' %}" alt="Air Transport">
+                            <img src="{% static 'img/transport/AirTransport.png' %}" alt="Air Transport">
                             <div class="slide-overlay">
                                 <div class="slide-icon">
                                     <i class="fas fa-plane" aria-hidden="true"></i>
                                 </div>
                                 <p class="slide-title"><strong data-i18n="services.air">Air Transport</strong></p>
-                                <a href="#" class="slide-link" aria-label="Discover more about Air Transport">
+                                <a href="{% url 'site:services' %}#air-transport" class="slide-link"
+                                    aria-label="Discover more about Air Transport">
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i> <span
                                         data-i18n="services.discover">Discover More</span>
                                 </a>
@@ -118,14 +121,15 @@
 
                         <!-- Slide 4 - Maritime Transport -->
                         <div class="carousel-slide">
-                            <img src="{% static 'img/services/service4.png' %}" alt="Maritime Transport">
+                            <img src="{% static 'img/transport/MaritimeTransport.png' %}" alt="Maritime Transport">
                             <div class="slide-overlay">
                                 <div class="slide-icon">
                                     <i class="fas fa-ship" aria-hidden="true"></i>
                                 </div>
                                 <p class="slide-title"><strong data-i18n="services.maritime">Maritime Transport</strong>
                                 </p>
-                                <a href="#" class="slide-link" aria-label="Discover more about Maritime Transport">
+                                <a href="{% url 'site:services' %}#maritime-transport" class="slide-link"
+                                    aria-label="Discover more about Maritime Transport">
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i> <span
                                         data-i18n="services.discover">Discover More</span>
                                 </a>
@@ -149,16 +153,15 @@
 
             <!-- Texte à droite -->
             <div class="services-text">
-                <p class="services-subtitle" data-i18n="services.subtitle">Core Services</p>
-                <h2 class="services-title" data-i18n="services.title">Transport is defined As a movement</h2>
+                <p class="services-subtitle" data-i18n="services.subtitle">What We Do</p>
+                <h2 class="services-title" data-i18n="services.title">End-to-End Solutions for Your Business</h2>
                 <p class="services-description" data-i18n="services.description">
-                    Transport or transportation is the movement of humans, animals and goods from one location to
-                    another. In other words, the action of transport is defined as a particular movement of an organism
-                    or thing from a point A to a Point B. Modes of transport include air, land (rail and road) water,
-                    cable, pipeline and space. The field can be divided into infrastructure, vehicles and operations.
-                    Transport enables trade between people, which is essential for the development of civilizations.
+                    KOATSU delivers comprehensive sourcing, logistics, and consulting services tailored to your business
+                    needs. From identifying reliable suppliers across Asia and Europe to managing complex supply chains
+                    and ensuring product quality, we provide the expertise and network to help your business thrive in
+                    the global market.
                 </p>
-                <a href="#services" class="btn btn-services">
+                <a href="{% url 'site:services' %}" class="btn btn-services">
                     <i class="fas fa-briefcase"></i> <span data-i18n="services.btn">More Services</span>
                 </a>
             </div>
